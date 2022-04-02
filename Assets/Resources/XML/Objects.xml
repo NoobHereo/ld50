@@ -21,6 +21,16 @@
   <Object name="Barrel">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>12</SpriteIndex>
+    <!--
+    <RandomTexture>      
+      <SpriteIndex>12</SpriteIndex>
+      <SpriteIndex>13</SpriteIndex>
+      <SpriteIndex>15</SpriteIndex>
+      <SpriteIndex>17</SpriteIndex>
+      <SpriteIndex>18</SpriteIndex>
+      <SpriteIndex>19</SpriteIndex>
+    </RandomTexture>
+    -->
   </Object>
 
   <!-- This should probably have some randomized sprites-->

@@ -8,4 +8,8 @@
     <resource>Tutorial</resource>
   </World>
 
+  <World name="Enemy Test World">
+    <resource>EnemyTestWorld</resource>
+  </World>
+
 </Worlds>
