@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -7,7 +8,7 @@ public class World : MonoBehaviour
     public static World Instance;
     public string CurrentMap = "None";
     public Dictionary<Vector3Int, SimpleTile> Tiles = new Dictionary<Vector3Int, SimpleTile>();
-    public Dictionary<Vector3Int, SimpleTile> Objects = new Dictionary<Vector3Int, SimpleTile>();
+    public Dictionary<Vector3Int, GameObject> Objects = new Dictionary<Vector3Int, GameObject>();
     public Tilemap Tilemap;
 
     private void Start()
@@ -36,32 +37,44 @@ public class World : MonoBehaviour
     public void RenderMap(string resource)
     {
         Tiles = new Dictionary<Vector3Int, SimpleTile>();
-        Objects = new Dictionary<Vector3Int, SimpleTile>();
+        Objects = new Dictionary<Vector3Int, GameObject>();
 
         TextAsset json = Resources.Load<TextAsset>($"Maps/{resource}");
-        SimpleTileData[] tiles = JsonHelper.FromJson<SimpleTileData>(json.text);
-        foreach(SimpleTileData tile in tiles)
+        SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json.text);
+        foreach(SimpleTileData data in tileData)
         {
-            Vector2Int pos = new Vector2Int(tile.posX, tile.posY);
+            Vector2Int pos = new Vector2Int(data.posX, data.posY);
+            Vector3Int newPos = new Vector3Int(pos.x, pos.y, 0);
 
             // Tiles
-            if (tile.type == TileType.Tile)
+            if (data.type == TileType.Tile)
             {
                 SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
-                newTile.Name = tile.name;
-                newTile.Type = tile.type;
-                if (AssetHandler.TileXMLs.ContainsKey(tile.name))
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.TileXMLs.ContainsKey(data.name))
                 {
-                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.TileXMLs[tile.name]);
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.TileXMLs[data.name]);
                     newTile.Sprite = sprite;
                 }
                 DrawTile(new Vector3Int(pos.x, pos.y, 0), newTile);
             }
 
             // Objects
-            else if (tile.type == TileType.Object)
+            else if (data.type == TileType.Object)
             {
-                // This is supposed to be objects
+                GameObject obj = new GameObject(data.name);
+                obj.AddComponent<SpriteRenderer>();
+                if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.ObjectXMLs[data.name]);
+                    if (data.name == "Playerspawn")
+                        obj.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Sprites/Invisible");
+                    else
+                        obj.GetComponent<SpriteRenderer>().sprite = sprite;
+                }
+                obj.transform.position = newPos;
+                Objects.Add(newPos, obj);
             }
         }
 
@@ -75,7 +88,9 @@ public class World : MonoBehaviour
 
     public void InstantiatePlayer()
     {
+        GameObject spawn = GameObject.Find("Playerspawn");
         GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
         player.GetComponent<Player>().InitCamera();
+        player.transform.position = spawn.transform.position;
     }
 }
