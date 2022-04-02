@@ -20,9 +20,9 @@ public class MapEditor : MonoBehaviour
     public Dictionary<Vector3Int, SimpleTile> AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
 
     public Tilemap TileLayer, ObjectLayer;
-    public GameObject TileSelectionPanel, TileButtonPrefab;
+    public GameObject TileSelectionPanel, TileButtonPrefab, WorldButtonsPanel;
     public TextMeshProUGUI CurrentXmlDrawText;
-    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton, TutorialButton;
+    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton;
 
     private void Start()
     {
@@ -32,17 +32,22 @@ public class MapEditor : MonoBehaviour
         TilesButton.onClick.AddListener(OnTilesClick);
         ObjectsButton.onClick.AddListener(OnObjectsClick);
         MenuButton.onClick.AddListener(OnMenuClick);
-        TutorialButton.onClick.AddListener(OnTutorialClick);
 
         Drawing = true;
         Erasing = false;
+
+        TileLayer.size = new Vector3Int(300, 300, 0);
+        ObjectLayer.size = new Vector3Int(300, 300, 0);
 
         TextAsset tileXML = Resources.Load<TextAsset>("XML/Tiles");
         AssetHandler.ParseTiles(tileXML);
         TextAsset objXML = Resources.Load<TextAsset>("XML/Objects");
         AssetHandler.ParseObjects(objXML);
+        TextAsset worldXML = Resources.Load<TextAsset>("XML/Worlds");
+        AssetHandler.ParseWorlds(worldXML);
 
         LoadTiles();
+        AddWorldButtons();
     }
 
     private void Update()
@@ -197,12 +202,11 @@ public class MapEditor : MonoBehaviour
         SceneManager.LoadScene("SplashScreen");
     }
 
-    private void OnTutorialClick()
+    public void LoadMapRequest(string resource)
     {
-        AddedTiles = new Dictionary<Vector3Int, SimpleTile>();
-        AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
+        ClearMap();
 
-        TextAsset json = Resources.Load<TextAsset>($"Maps/TutorialNew");
+        TextAsset json = Resources.Load<TextAsset>($"Maps/{resource}");
         SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json.text);
         foreach (SimpleTileData data in tileData)
         {
@@ -237,5 +241,47 @@ public class MapEditor : MonoBehaviour
                 UpdateGridCell(new Vector3Int(pos.x, pos.y, 0), newTile, false);
             }
         }
+    }
+
+    private void AddWorldButtons()
+    {
+        if (AssetHandler.Loaded)
+        {
+            Debug.Log("hi");
+            foreach (var world in AssetHandler.WorldXMLs)
+            {
+                Debug.Log("yo");
+                GameObject worldButton = Instantiate(Resources.Load<GameObject>("Prefabs/WorldButton"), WorldButtonsPanel.transform);
+                worldButton.GetComponent<WorldButton>().Init(world.Key, world.Value.Element("resource").Value);
+            }
+        }
+        else
+        {
+            Debug.LogError("Assethandler was not ready when called");
+        }
+    }
+
+    public void ClearMap()
+    {
+        for (int x = 0; x < TileLayer.size.x; x++)
+        {
+            for (int y = 0; y < TileLayer.size.y; y++)
+            {
+                Vector3Int pos = new Vector3Int(x, y, 0);
+                TileLayer.SetTile(pos, null);
+            }
+        }
+
+        for (int x = 0; x < ObjectLayer.size.x; x++)
+        {
+            for (int y = 0; y < ObjectLayer.size.y; y++)
+            {
+                Vector3Int pos = new Vector3Int(x, y, 0);
+                ObjectLayer.SetTile(pos, null);
+            }
+        }
+
+        AddedTiles = new Dictionary<Vector3Int, SimpleTile>();
+        AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
     }
 }

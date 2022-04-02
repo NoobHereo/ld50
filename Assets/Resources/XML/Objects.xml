@@ -64,5 +64,20 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>6</SpriteIndex>
   </Object>
+
+  <Object name="Chicken">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>32</SpriteIndex>
+  </Object>
+
+  <Object name="Cat">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>33</SpriteIndex>
+  </Object>
+
+  <Object name="Weird Slimy Thing">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>34</SpriteIndex>
+  </Object>
   
 </Objects>
