@@ -6,17 +6,31 @@ using UnityEngine.U2D;
 public static class AssetHandler
 {
     public static bool Loaded = false;
-    public static Dictionary<XElement, string> Tiles = new Dictionary<XElement, string>();
+    public static Dictionary<XElement, string> TileXMLs = new Dictionary<XElement, string>();
+    public static Dictionary<XElement, string> ObjectXMLs = new Dictionary<XElement, string>();
 
-    public static void Init(TextAsset tileXML)
+    public static void ParseTiles(TextAsset tileXML)
     {
         var tiles = XElement.Parse(tileXML.text);
         foreach(var tile in tiles.Elements("Tile"))
         {
-            string name = tile.Attribute("name").Value;
-            Tiles.Add(tile, name);
+            TileXMLs.Add(tile, tile.Attribute("name").Value);
         }
-        Loaded = true;
+
+        if (!Loaded)
+            Loaded = true;
+    }
+
+    public static void ParseObjects(TextAsset objXML)
+    {
+        var objects = XElement.Parse(objXML.text);
+        foreach(var obj in objects.Elements("Object"))
+        {
+            ObjectXMLs.Add(obj, obj.Attribute("name").Value);
+        }
+
+        if (!Loaded)
+            Loaded = true;
     }
 
     public static Sprite GetSpriteFromXML(XElement xml)
@@ -26,7 +40,7 @@ public static class AssetHandler
             string asset = xml.Element("SpriteAsset").Value;
             string index = xml.Element("SpriteIndex").Value;
             SpriteAtlas atlas = Resources.Load<SpriteAtlas>($"Sprites/{xml.Name.LocalName + "Atlas"}");
-            Sprite sprite = atlas.GetSprite(xml.Element("SpriteAsset").Value + "_" + xml.Element("SpriteIndex").Value);
+            Sprite sprite = atlas.GetSprite(asset + "_" + index);
             return sprite;
         }
         else

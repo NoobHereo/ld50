@@ -14,7 +14,7 @@ public class SimpleTileData
 {
     public string name;
     public int posX, posY;
-    public TileType type = TileType.Tile;
+    public TileType type;
 }
 
 public class SimpleTile : TileBase

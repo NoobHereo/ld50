@@ -1,0 +1,13 @@
+﻿<Objects>
+
+  <Object name="Dark Wall">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>0</SpriteIndex>
+  </Object>
+
+  <Object name="Dark Wall Top">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>1</SpriteIndex>
+  </Object>
+
+</Objects>
