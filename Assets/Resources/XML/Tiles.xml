@@ -1,0 +1,9 @@
+﻿<Tiles>
+  
+  <Tile name="Dark Floor">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>4</SpriteIndex>
+    <XmlType>Tile</XmlType>
+  </Tile>
+  
+</Tiles>
