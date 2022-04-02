@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MapEditor.unity
-    guid: bce970e977c8b9b46bee201e6053f18d
-  - enabled: 1
     path: Assets/Scenes/SplashScreen.unity
     guid: e136218dddd53fe429dcb8c4025d7ccc
+  - enabled: 1
+    path: Assets/Scenes/MapEditor.unity
+    guid: bce970e977c8b9b46bee201e6053f18d
   m_configObjects: {}

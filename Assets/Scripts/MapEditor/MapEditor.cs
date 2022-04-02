@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.SceneManagement;
 
 public class MapEditor : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class MapEditor : MonoBehaviour
     public Tilemap TileLayer, ObjectLayer;
     public GameObject TileSelectionPanel, TileButtonPrefab;
     public TextMeshProUGUI CurrentXmlDrawText;
-    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton;
+    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class MapEditor : MonoBehaviour
         ShareButton.onClick.AddListener(ExportMap);
         TilesButton.onClick.AddListener(OnTilesClick);
         ObjectsButton.onClick.AddListener(OnObjectsClick);
+        MenuButton.onClick.AddListener(OnMenuClick);
 
         Drawing = true;
         Erasing = false;
@@ -187,5 +189,10 @@ public class MapEditor : MonoBehaviour
             Destroy(TileSelectionPanel.transform.GetChild(i).gameObject);
 
         LoadObjects();
+    }
+
+    private void OnMenuClick()
+    {
+        SceneManager.LoadScene("SplashScreen");
     }
 }
