@@ -1,10 +1,20 @@
+using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[Serializable]
 public enum TileType
 {
     Tile,
     Object
+}
+
+[Serializable]
+public class SimpleTileData
+{
+    public string name;
+    public int posX, posY;
+    public TileType type = TileType.Tile;
 }
 
 public class SimpleTile : TileBase

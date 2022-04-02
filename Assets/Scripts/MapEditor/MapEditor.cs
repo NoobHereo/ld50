@@ -2,8 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using TMPro;
-using System.Xml.Linq;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine.EventSystems;
+using System;
 
 public class MapEditor : MonoBehaviour
 {
@@ -13,16 +15,18 @@ public class MapEditor : MonoBehaviour
     [SerializeField] public bool Erasing { get; private set; }
 
     public SimpleTile CurrentTile;
+    public Dictionary<Vector3Int, SimpleTile> AddedTiles = new Dictionary<Vector3Int, SimpleTile>();
 
     public Tilemap TileLayer, ObjectLayer;
     public GameObject TileSelectionPanel, TileButtonPrefab;
     public TextMeshProUGUI CurrentXmlDrawText;
-    public Button DrawEraseButton;
+    public Button DrawEraseButton, ShareButton;
 
     private void Start()
     {
         Instance = this;
         DrawEraseButton.onClick.AddListener(OnDrawEraseClick);
+        ShareButton.onClick.AddListener(ExportMap);
 
         Drawing = true;
         Erasing = false;
@@ -73,19 +77,23 @@ public class MapEditor : MonoBehaviour
         if (Erasing)
         {
             tilemap.SetTile(pos, null);
+            AddedTiles.Remove(pos);
             return;
         }
 
         if (tilemap.GetTile(pos) == null)
         {
             tilemap.SetTile(pos, tile);
+            AddedTiles.Add(pos, tile);
             return;
         }
         else if (tilemap.GetTile(pos) != tile)
         {
             Debug.Log("Replaced");
             tilemap.SetTile(pos, null);
+            AddedTiles.Remove(pos);
             tilemap.SetTile(pos, tile);
+            AddedTiles.Add(pos, tile);
             return;
         }
     }
@@ -101,5 +109,23 @@ public class MapEditor : MonoBehaviour
 
         CurrentXmlDrawText.text = drwText;
         DrawEraseButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = btnText;
+    }
+
+    private void ExportMap()
+    {
+        Debug.Log(AddedTiles.Count);
+        List<SimpleTileData> tileData = new List<SimpleTileData>();
+        foreach(var tile in AddedTiles)
+        {
+            SimpleTileData data = new SimpleTileData();
+            data.name = tile.Value.Name;
+            data.posX = tile.Key.x;
+            data.posY = tile.Key.y;
+            data.type = tile.Value.Type;
+            tileData.Add(data);
+        }
+
+        string json = JsonHelper.ToJson(tileData.ToArray(), true);
+        File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\mapFile.json", json);
     }
 }
