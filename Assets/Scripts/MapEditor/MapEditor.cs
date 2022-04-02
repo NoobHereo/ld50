@@ -1,20 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
+using TMPro;
+using System.Xml.Linq;
+using UnityEngine.EventSystems;
 
 public class MapEditor : MonoBehaviour
 {
-    public bool Drawing { get; private set; }
-    public bool Erasing { get; private set; }
+    public static MapEditor Instance;
 
-    public Tilemap TileLayer;
+    [SerializeField] public bool Drawing { get; private set; }
+    [SerializeField] public bool Erasing { get; private set; }
+
+    public SimpleTile CurrentTile;
+
+    public Tilemap TileLayer, ObjectLayer;
     public GameObject TileSelectionPanel, TileButtonPrefab;
+    public TextMeshProUGUI CurrentXmlDrawText;
+    public Button DrawEraseButton;
 
     private void Start()
     {
+        Instance = this;
+        DrawEraseButton.onClick.AddListener(OnDrawEraseClick);
+
         Drawing = true;
         Erasing = false;
+
         LoadTiles();
+    }
+
+    private void Update()
+    {
+        Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (Input.GetButton("Fire1") && CurrentTile != null && !EventSystem.current.IsPointerOverGameObject())
+            UpdateGridCell(point, CurrentTile);
     }
 
     public void LoadTiles()
@@ -30,5 +50,56 @@ public class MapEditor : MonoBehaviour
                 tileBtnPrefab.GetComponent<TileButton>().Init(tile.Key, tile.Value);
             }
         }
+    }
+
+    public void SetDrawXML(string name, Sprite sprite, TileType type)
+    {
+        if (!Erasing)
+        {
+            CurrentXmlDrawText.text = "Drawing with: " + name;
+            SimpleTile tile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+            tile.name = name;
+            tile.Sprite = sprite;
+            tile.Type = type;
+            CurrentTile = tile;
+        }
+    }
+
+    private void UpdateGridCell(Vector3 point, SimpleTile tile)
+    {
+        Tilemap tilemap = tile.Type == TileType.Tile ? TileLayer : ObjectLayer;
+        Vector3Int pos = tilemap.WorldToCell(point);
+
+        if (Erasing)
+        {
+            tilemap.SetTile(pos, null);
+            return;
+        }
+
+        if (tilemap.GetTile(pos) == null)
+        {
+            tilemap.SetTile(pos, tile);
+            return;
+        }
+        else if (tilemap.GetTile(pos) != tile)
+        {
+            Debug.Log("Replaced");
+            tilemap.SetTile(pos, null);
+            tilemap.SetTile(pos, tile);
+            return;
+        }
+    }
+
+    private void OnDrawEraseClick()
+    {
+        Drawing = !Drawing;
+        Erasing = !Erasing;
+
+        string btnText = Drawing ? "Erase" : "Draw";
+        string currTileName = CurrentTile == null ? "Nothing" : CurrentTile.Name;
+        string drwText = Drawing ? "Drawing with: " + currTileName : "Erasing";
+
+        CurrentXmlDrawText.text = drwText;
+        DrawEraseButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = btnText;
     }
 }

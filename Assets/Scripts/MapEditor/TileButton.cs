@@ -9,6 +9,8 @@ public class TileButton : MonoBehaviour
     private Image img;
     public XElement TileXML { get; private set; }
     public string TileName { get; private set; }
+    public Sprite TileSprite { get; private set; }
+    public TileType TileType { get; private set; }
 
     public void Init(XElement tileXML, string tileName)
     {
@@ -18,14 +20,19 @@ public class TileButton : MonoBehaviour
         btn.onClick.AddListener(OnClick);
         TileXML = tileXML;
         TileName = tileName;
-        //if (AssetHandler.GetSpriteFromXML(TileXML) == null)
-        //    Debug.LogError("sprite was null");
 
-        img.sprite = AssetHandler.GetSpriteFromXML(TileXML);
+
+        if (tileXML.Name.LocalName == "Tile")
+            TileType = TileType.Tile;
+        else if (tileXML.Name.LocalName == "Object")
+            TileType = TileType.Object;
+
+        TileSprite = AssetHandler.GetSpriteFromXML(TileXML);
+        img.sprite = TileSprite;
     }
 
     private void OnClick()
     {
-        // TODO: Implement something here
+        MapEditor.Instance.SetDrawXML(TileName, TileSprite, TileType);
     }
 }

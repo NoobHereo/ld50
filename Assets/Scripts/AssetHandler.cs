@@ -21,13 +21,11 @@ public static class AssetHandler
 
     public static Sprite GetSpriteFromXML(XElement xml)
     {
-        if (xml.Element("SpriteAsset") != null & xml.Element("SpriteIndex") != null && xml.Element("XmlType") != null)
+        if (xml.Element("SpriteAsset") != null & xml.Element("SpriteIndex") != null)
         {
             string asset = xml.Element("SpriteAsset").Value;
             string index = xml.Element("SpriteIndex").Value;
-
-            SpriteAtlas atlas = Resources.Load<SpriteAtlas>($"Sprites/{xml.Element("XmlType").Value + "Atlas"}");
-            Debug.Log(asset + "_" + index);
+            SpriteAtlas atlas = Resources.Load<SpriteAtlas>($"Sprites/{xml.Name.LocalName + "Atlas"}");
             Sprite sprite = atlas.GetSprite(xml.Element("SpriteAsset").Value + "_" + xml.Element("SpriteIndex").Value);
             return sprite;
         }
