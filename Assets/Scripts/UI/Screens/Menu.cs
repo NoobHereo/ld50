@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
 
     private void OnPlayClick()
     {
-        World.Instance.LoadWorld("Dark Cellar");
+        World.Instance.LoadWorld("Tutorial");
         Dispatch(false);        
     }
 

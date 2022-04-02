@@ -4,4 +4,8 @@
     <resource>TestLevel</resource>
   </World>
 
+  <World name="Tutorial">
+    <resource>Tutorial</resource>
+  </World>
+
 </Worlds>

@@ -22,7 +22,7 @@ public class MapEditor : MonoBehaviour
     public Tilemap TileLayer, ObjectLayer;
     public GameObject TileSelectionPanel, TileButtonPrefab;
     public TextMeshProUGUI CurrentXmlDrawText;
-    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton;
+    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton, TutorialButton;
 
     private void Start()
     {
@@ -32,6 +32,7 @@ public class MapEditor : MonoBehaviour
         TilesButton.onClick.AddListener(OnTilesClick);
         ObjectsButton.onClick.AddListener(OnObjectsClick);
         MenuButton.onClick.AddListener(OnMenuClick);
+        TutorialButton.onClick.AddListener(OnTutorialClick);
 
         Drawing = true;
         Erasing = false;
@@ -88,10 +89,10 @@ public class MapEditor : MonoBehaviour
         }
     }
 
-    private void UpdateGridCell(Vector3 point, SimpleTile tile)
+    private void UpdateGridCell(Vector3 point, SimpleTile tile, bool convertPos = true)
     {
         Tilemap tilemap = tile.Type == TileType.Tile ? TileLayer : ObjectLayer;
-        Vector3Int pos = tilemap.WorldToCell(point);
+        Vector3Int pos = convertPos ? tilemap.WorldToCell(point) : new Vector3Int((int)point.x, (int)point.y, 0);
 
         // Expand these statements on your own risk! (it's not pretty)
         if (Erasing)
@@ -194,5 +195,47 @@ public class MapEditor : MonoBehaviour
     private void OnMenuClick()
     {
         SceneManager.LoadScene("SplashScreen");
+    }
+
+    private void OnTutorialClick()
+    {
+        AddedTiles = new Dictionary<Vector3Int, SimpleTile>();
+        AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
+
+        TextAsset json = Resources.Load<TextAsset>($"Maps/TutorialNew");
+        SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json.text);
+        foreach (SimpleTileData data in tileData)
+        {
+            Vector2Int pos = new Vector2Int(data.posX, data.posY);
+            Vector3Int newPos = new Vector3Int(pos.x, pos.y, 0);
+
+            // Tiles
+            if (data.type == TileType.Tile)
+            {
+                SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.TileXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.TileXMLs[data.name]);
+                    newTile.Sprite = sprite;
+                }
+                UpdateGridCell(new Vector3Int(pos.x, pos.y, 0), newTile, false);
+            }
+
+            // Objects
+            else if (data.type == TileType.Object)
+            {
+                SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.ObjectXMLs[data.name]);
+                    newTile.Sprite = sprite;
+                }
+                UpdateGridCell(new Vector3Int(pos.x, pos.y, 0), newTile, false);
+            }
+        }
     }
 }

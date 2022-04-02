@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Xml.Linq;
 
 public class World : MonoBehaviour
 {
@@ -65,14 +66,30 @@ public class World : MonoBehaviour
             {
                 GameObject obj = new GameObject(data.name);
                 obj.AddComponent<SpriteRenderer>();
+                var renderer = obj.GetComponent<SpriteRenderer>();
+                XElement xml = null;
                 if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
                 {
-                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.ObjectXMLs[data.name]);
+                    xml = AssetHandler.ObjectXMLs[data.name];
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(xml);
                     if (data.name == "Playerspawn")
-                        obj.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>($"Sprites/Invisible");
+                        renderer.sprite = Resources.Load<Sprite>($"Sprites/Invisible");
                     else
-                        obj.GetComponent<SpriteRenderer>().sprite = sprite;
+                        renderer.sprite = sprite;
                 }
+
+                if (xml.Element("HasCollider") != null)
+                {
+                    obj.AddComponent<BoxCollider2D>();
+                    BoxCollider2D collider = obj.GetComponent<BoxCollider2D>();
+                    collider.size = new Vector2(1f, 1f);
+                    collider.offset = new Vector2(0, 0);
+
+                    collider.isTrigger = xml.Element("IsTrigger") != null ? true : false;
+                }    
+
+                renderer.sortingLayerID = SortingLayer.NameToID("Objects");
+                renderer.sortingOrder = 1;
                 obj.transform.position = newPos;
                 Objects.Add(newPos, obj);
             }

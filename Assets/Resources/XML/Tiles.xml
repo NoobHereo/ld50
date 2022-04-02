@@ -4,5 +4,20 @@
     <SpriteAsset>StaticObjects8x8</SpriteAsset>
     <SpriteIndex>12</SpriteIndex>
   </Tile>
+
+  <Tile name="Testing Checker Floor">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>1</SpriteIndex>
+  </Tile>
+  
+  <Tile name="Wooden Floor">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>4</SpriteIndex>
+  </Tile>
+
+  <Tile name="Marble Checker Floor">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>7</SpriteIndex>
+  </Tile>
   
 </Tiles>

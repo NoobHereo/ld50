@@ -8,11 +8,13 @@
   <Object name="Dark Wall">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>0</SpriteIndex>
+    <HasCollider/>
   </Object>
 
   <Object name="Dark Wall Top">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>1</SpriteIndex>
+    <HasCollider/>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
@@ -38,4 +40,29 @@
     <SpriteIndex>36</SpriteIndex>
   </Object>
 
+  <Object name="Ghost Knight">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>2</SpriteIndex>
+  </Object>
+
+  <Object name="Orc">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>3</SpriteIndex>
+  </Object>
+
+  <Object name="Goblin">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>4</SpriteIndex>
+  </Object>
+
+  <Object name="Zombie">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>5</SpriteIndex>
+  </Object>
+
+  <Object name="Skeleton">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>6</SpriteIndex>
+  </Object>
+  
 </Objects>
