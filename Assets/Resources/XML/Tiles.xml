@@ -2,12 +2,7 @@
   
   <Tile name="Dark Floor">
     <SpriteAsset>StaticObjects8x8</SpriteAsset>
-    <SpriteIndex>4</SpriteIndex>
-  </Tile>
-
-  <Tile name="Dark Floor Test">
-    <SpriteAsset>StaticObjects8x8</SpriteAsset>
-    <SpriteIndex>5</SpriteIndex>
+    <SpriteIndex>12</SpriteIndex>
   </Tile>
   
 </Tiles>
