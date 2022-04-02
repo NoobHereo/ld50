@@ -18,4 +18,9 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector2(horizontal * Speed * Time.fixedDeltaTime, vertical * Speed * Time.fixedDeltaTime);
     }
 
+    public void InitCamera()
+    {
+        Camera.main.GetComponent<GameCamera>().SetTarget(transform);
+    }
+
 }

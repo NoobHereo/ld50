@@ -64,32 +64,18 @@ public class World : MonoBehaviour
                 // This is supposed to be objects
             }
         }
+
+        InstantiatePlayer();
     }
 
     public void DrawTile(Vector3Int pos, SimpleTile tile)
     {
-        Debug.Log("tick: " + AssetHandler.TileXMLs[tile.Name]);
-        Tilemap.SetTile(pos, tile);
-        //if (Tilemap.GetTile(pos) == null)
-        //{
-        //    Tilemap.SetTile(pos, tile);
+        Tilemap.SetTile(pos, tile);      
+    }
 
-        //    if (tile.Type == TileType.Tile)
-        //        Tiles.Add(pos, tile);
-
-        //    return;
-        //}
-        //else if (Tilemap.GetTile(pos) != tile)
-        //{
-        //    Tilemap.SetTile(pos, null);
-        //    if (tile.Type == TileType.Tile)
-        //        Tiles.Remove(pos);
-
-        //    Tilemap.SetTile(pos, tile);
-        //    if (tile.Type == TileType.Tile)
-        //        Tiles.Add(pos, tile);
-
-        //    return;
-        //}
+    public void InstantiatePlayer()
+    {
+        GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
+        player.GetComponent<Player>().InitCamera();
     }
 }
