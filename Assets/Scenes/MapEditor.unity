@@ -227,7 +227,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -932,8 +932,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.59192, y: -116.09601}
-  m_SizeDelta: {x: 263.184, y: 90.191}
+  m_AnchoredPosition: {x: 115, y: -105}
+  m_SizeDelta: {x: 205, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048023142
 MonoBehaviour:
@@ -1053,8 +1053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.59192, y: -889}
-  m_SizeDelta: {x: 263.184, y: 90.191}
+  m_AnchoredPosition: {x: 120, y: -580}
+  m_SizeDelta: {x: 205, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1051320143
 MonoBehaviour:
@@ -1174,8 +1174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 144.59192, y: -225.75986}
-  m_SizeDelta: {x: 263.184, y: 90.191}
+  m_AnchoredPosition: {x: 115, y: -189}
+  m_SizeDelta: {x: 205, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108446273
 MonoBehaviour:
@@ -1270,6 +1270,7 @@ GameObject:
   - component: {fileID: 1305106233}
   - component: {fileID: 1305106232}
   - component: {fileID: 1305106231}
+  - component: {fileID: 1305106234}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1342,6 +1343,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305106234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305106230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee6bde5a90b19e4bbed1bdc3d209e76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1388425947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,8 +1390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 69.223}
-  m_SizeDelta: {x: 1918, y: 138.446}
+  m_AnchoredPosition: {x: 0.008071899, y: 47.15497}
+  m_SizeDelta: {x: 1280.7, y: 94.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1388425949
 MonoBehaviour:
@@ -1400,7 +1413,7 @@ MonoBehaviour:
   m_ChildAlignment: 3
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 75, y: 75}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -1476,8 +1489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -366.783, y: 498.986}
-  m_SizeDelta: {x: 1160.435, y: 42.03}
+  m_AnchoredPosition: {x: -405, y: 335}
+  m_SizeDelta: {x: 435, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407678720
 MonoBehaviour:
@@ -1526,7 +1539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.1
+  m_fontSize: 36.35
   m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1660,12 +1673,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52
+  m_fontSize: 47.25
   m_fontSizeBase: 52
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 56
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1880,8 +1893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 425.35608, y: -889}
-  m_SizeDelta: {x: 263.184, y: 90.191}
+  m_AnchoredPosition: {x: 337, y: -580}
+  m_SizeDelta: {x: 205, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896546201
 MonoBehaviour:
