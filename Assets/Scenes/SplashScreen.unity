@@ -879,6 +879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee30dccc906f304488e427396f205a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentMap: None
+  Tilemap: {fileID: 788988931}
 --- !u!4 &1052167817
 Transform:
   m_ObjectHideFlags: 0

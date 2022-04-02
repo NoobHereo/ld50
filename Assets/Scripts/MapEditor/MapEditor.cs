@@ -58,7 +58,7 @@ public class MapEditor : MonoBehaviour
             foreach(var tile in AssetHandler.TileXMLs)
             {
                 GameObject tileBtn = Instantiate(Resources.Load<GameObject>("Prefabs/TileButton"), TileSelectionPanel.transform);
-                tileBtn.GetComponent<TileButton>().Init(tile.Key, tile.Value);
+                tileBtn.GetComponent<TileButton>().Init(tile.Value, tile.Key);
             }
         }
     }
@@ -70,7 +70,7 @@ public class MapEditor : MonoBehaviour
             foreach(var obj in AssetHandler.ObjectXMLs)
             {
                 GameObject tileBtn = Instantiate(Resources.Load<GameObject>("Prefabs/TileButton"), TileSelectionPanel.transform);
-                tileBtn.GetComponent<TileButton>().Init(obj.Key, obj.Value);
+                tileBtn.GetComponent<TileButton>().Init(obj.Value, obj.Key);
             }
         }
     }

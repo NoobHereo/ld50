@@ -6,15 +6,16 @@ using UnityEngine.U2D;
 public static class AssetHandler
 {
     public static bool Loaded = false;
-    public static Dictionary<XElement, string> TileXMLs = new Dictionary<XElement, string>();
-    public static Dictionary<XElement, string> ObjectXMLs = new Dictionary<XElement, string>();
+    public static Dictionary<string, XElement> TileXMLs = new Dictionary<string, XElement>();
+    public static Dictionary<string, XElement> ObjectXMLs = new Dictionary<string, XElement>();
+    public static Dictionary<string, XElement> WorldXMLs = new Dictionary<string, XElement>();
 
     public static void ParseTiles(TextAsset tileXML)
     {
         var tiles = XElement.Parse(tileXML.text);
         foreach(var tile in tiles.Elements("Tile"))
         {
-            TileXMLs.Add(tile, tile.Attribute("name").Value);
+            TileXMLs.Add(tile.Attribute("name").Value, tile);
         }
 
         if (!Loaded)
@@ -26,7 +27,7 @@ public static class AssetHandler
         var objects = XElement.Parse(objXML.text);
         foreach(var obj in objects.Elements("Object"))
         {
-            ObjectXMLs.Add(obj, obj.Attribute("name").Value);
+            ObjectXMLs.Add(obj.Attribute("name").Value, obj);
         }
 
         if (!Loaded)
@@ -47,6 +48,17 @@ public static class AssetHandler
         {
             Debug.LogError("The given xml is missing either SpriteAsset or SpriteIndex if not both.");
             return null;
+        }
+    }
+
+    public static void ParseWorlds(TextAsset worldsXML)
+    {
+        var worlds = XElement.Parse(worldsXML.text);
+        foreach(var worldXml in worlds.Elements("World"))
+        {
+            string name = worldXml.Attribute("name").Value;
+            string resource = worldXml.Element("resource").Value;
+            WorldXMLs.Add(name, worldXml);
         }
     }
 }
