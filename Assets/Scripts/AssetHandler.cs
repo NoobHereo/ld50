@@ -66,5 +66,7 @@ public static class AssetHandler
             string resource = worldXml.Element("resource").Value;
             WorldXMLs.Add(name, worldXml);
         }
+
+        LevelSelection.Instance.Init();
     }
 }

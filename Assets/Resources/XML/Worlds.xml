@@ -1,11 +1,11 @@
 ﻿<Worlds>
 
-  <World name="Dark Cellar">
-    <resource>TestLevel</resource>
-  </World>
-
   <World name="Tutorial">
     <resource>Tutorial</resource>
+  </World>
+
+  <World name="Dark Cellar">
+    <resource>TestLevel</resource>
   </World>
 
   <World name="Enemy Test World">
