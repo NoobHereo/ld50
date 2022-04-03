@@ -7,6 +7,7 @@ using System.IO;
 using UnityEngine.EventSystems;
 using System;
 using UnityEngine.SceneManagement;
+using System.Text;
 
 public class MapEditor : MonoBehaviour
 {
@@ -20,9 +21,10 @@ public class MapEditor : MonoBehaviour
     public Dictionary<Vector3Int, SimpleTile> AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
 
     public Tilemap TileLayer, ObjectLayer;
-    public GameObject TileSelectionPanel, TileButtonPrefab, WorldButtonsPanel;
+    public GameObject TileSelectionPanel, TileButtonPrefab, WorldButtonsPanel, LoadPanel;
     public TextMeshProUGUI CurrentXmlDrawText;
-    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton;
+    public Button DrawEraseButton, ShareButton, TilesButton, ObjectsButton, MenuButton, LoadButton, LoadConfirmButton;
+    public TMP_InputField LoadField;
 
     private void Start()
     {
@@ -32,6 +34,8 @@ public class MapEditor : MonoBehaviour
         TilesButton.onClick.AddListener(OnTilesClick);
         ObjectsButton.onClick.AddListener(OnObjectsClick);
         MenuButton.onClick.AddListener(OnMenuClick);
+        LoadButton.onClick.AddListener(OnLoadClick);
+        LoadConfirmButton.onClick.AddListener(OnLoadConfirmClick);
 
         Drawing = true;
         Erasing = false;
@@ -263,25 +267,78 @@ public class MapEditor : MonoBehaviour
 
     public void ClearMap()
     {
-        for (int x = 0; x < TileLayer.size.x; x++)
-        {
-            for (int y = 0; y < TileLayer.size.y; y++)
-            {
-                Vector3Int pos = new Vector3Int(x, y, 0);
-                TileLayer.SetTile(pos, null);
-            }
-        }
-
-        for (int x = 0; x < ObjectLayer.size.x; x++)
-        {
-            for (int y = 0; y < ObjectLayer.size.y; y++)
-            {
-                Vector3Int pos = new Vector3Int(x, y, 0);
-                ObjectLayer.SetTile(pos, null);
-            }
-        }
+        TileLayer.ClearAllTiles();
+        ObjectLayer.ClearAllTiles();
 
         AddedTiles = new Dictionary<Vector3Int, SimpleTile>();
         AddedObjects = new Dictionary<Vector3Int, SimpleTile>();
+    }
+
+    private void OnLoadClick()
+    {
+        LoadPanel.gameObject.SetActive(true);
+    }
+
+    private void OnLoadConfirmClick()
+    {
+        string deskPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        string path = deskPath + @"\" + LoadField.text + ".json";
+        string content;
+        try
+        {
+            var stream = new FileStream(path, FileMode.Open, FileAccess.Read);
+            using (var reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                content = reader.ReadToEnd();
+            }
+
+            CustomLoad(content);
+        }
+        catch (Exception ex)
+        {
+            LoadPanel.SetActive(false);
+            return;
+        }
+
+    }
+
+    public void CustomLoad(string json)
+    {
+        ClearMap();
+
+        SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json);
+        foreach (SimpleTileData data in tileData)
+        {
+            Vector2Int pos = new Vector2Int(data.posX, data.posY);
+            Vector3Int newPos = new Vector3Int(pos.x, pos.y, 0);
+
+            // Tiles
+            if (data.type == TileType.Tile)
+            {
+                SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.TileXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.TileXMLs[data.name]);
+                    newTile.Sprite = sprite;
+                }
+                UpdateGridCell(new Vector3Int(pos.x, pos.y, 0), newTile, false);
+            }
+
+            // Objects
+            else if (data.type == TileType.Object)
+            {
+                SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.ObjectXMLs[data.name]);
+                    newTile.Sprite = sprite;
+                }
+                UpdateGridCell(new Vector3Int(pos.x, pos.y, 0), newTile, false);
+            }
+        }
     }
 }

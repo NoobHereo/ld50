@@ -117,7 +117,12 @@ public class World : MonoBehaviour
         obj.AddComponent<SpriteRenderer>();
         var renderer = obj.GetComponent<SpriteRenderer>();
         renderer.sortingLayerID = SortingLayer.NameToID("Objects");
-        
+
+        obj.AddComponent<Rigidbody2D>();
+        var rb = obj.GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
         XElement xml = null;
 
         if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
@@ -127,6 +132,10 @@ public class World : MonoBehaviour
             Sprite sprite = hidden ? Resources.Load<Sprite>($"Sprites/Invisible") : AssetHandler.GetSpriteFromXML(xml);
             renderer.sprite = sprite;
         }
+        bool canMove = false;
+
+        if (xml.Element("NoMove") == null)
+            canMove = true;
 
         if (xml.Element("NoSort") == null)
             obj.AddComponent<HeightRendering>();
@@ -159,7 +168,7 @@ public class World : MonoBehaviour
                 hp = int.Parse(xml.Element("Health").Value);
 
             dmgTrigger.AddComponent<EnemyDamageTrigger>();
-            dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp);
+            dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp, canMove);
             enemies++;
         }
 
@@ -191,6 +200,15 @@ public class World : MonoBehaviour
         GameData data = new GameData();
         data.gold = goldGain;
         GameDataManager.SaveData(data);
+
+        Tilemap.ClearAllTiles();
+        foreach(var obj in Objects)
+        {
+            Destroy(obj.Value);
+        }
+
+        Tiles = new Dictionary<Vector3Int, SimpleTile>();
+        Objects = new Dictionary<Vector3Int, GameObject>();
 
         GameCamera.Instance.RemoveTarget();
         Destroy(Player.Instance.gameObject);
