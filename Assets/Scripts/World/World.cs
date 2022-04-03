@@ -66,34 +66,31 @@ public class World : MonoBehaviour
             {
                 if (data.name == "Tutorial WASD hud")
                 {
-                    Debug.Log("1");
                     GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/ControlsHUD"));
                     HUD.transform.position = new Vector3(data.posX, data.posY, 0);
                 }
-                else if (data.name == "Tutorial BARRELS hud")                 
+                else if (data.name == "Tutorial BARRELS hud")
                 {
-                    Debug.Log("2");
                     GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/BarrelsHUD"));
                     HUD.transform.position = new Vector3(data.posX, data.posY, 0);
                 }
                 else if (data.name == "Tutorial Enemy hud")
                 {
-                    Debug.Log("3");
                     GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/EnemyHUD"));
                     HUD.transform.position = new Vector3(data.posX, data.posY, 0);
                 }
+
                 GameObject obj = new GameObject(data.name);
                 obj.AddComponent<SpriteRenderer>();
                 var renderer = obj.GetComponent<SpriteRenderer>();
                 XElement xml = null;
+
                 if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
                 {
                     xml = AssetHandler.ObjectXMLs[data.name];
-                    Sprite sprite = AssetHandler.GetSpriteFromXML(xml);
-                    if (data.name == "Playerspawn")
-                        renderer.sprite = Resources.Load<Sprite>($"Sprites/Invisible");
-                    else
-                        renderer.sprite = sprite;
+                    bool hidden = xml.Element("Hidden") != null ? true : false;
+                    Sprite sprite = hidden ? Resources.Load<Sprite>($"Sprites/Invisible") : AssetHandler.GetSpriteFromXML(xml);
+                    renderer.sprite = sprite;
                 }
 
                 if (xml.Element("HasCollider") != null)

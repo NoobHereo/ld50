@@ -3,6 +3,7 @@
   <Object name="Playerspawn">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>2</SpriteIndex>
+    <Hidden/>
   </Object>
   
   <Object name="Dark Wall">
@@ -93,16 +94,19 @@
   <Object name="Tutorial WASD hud">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
   </Object>
 
   <Object name="Tutorial BARRELS hud">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
   </Object>
 
   <Object name="Tutorial Enemy hud">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
   </Object>
   
 </Objects>
