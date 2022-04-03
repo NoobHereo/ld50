@@ -15,10 +15,11 @@ public class LevelData
 [Serializable]
 public class GameData
 {
-    public string username;
-    public float speed;
-    public int damage;
-    public float dexterity;
+    public string username = "NoName";
+    public float speed = 300f;
+    public int damage = 25;
+    public float dexterity = 5f;
+    public int gold = 0;
 }
 
 public static class GameDataManager

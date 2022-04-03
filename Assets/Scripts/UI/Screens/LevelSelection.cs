@@ -8,7 +8,7 @@ public class LevelSelection : MonoBehaviour
     public static LevelSelection Instance;
     public Button EditorButton, BackButton, TutorialButton;
     public Menu Menu;
-    public TextMeshProUGUI Spd, Dmg, Dex;
+    public TextMeshProUGUI Spd, Dmg, Dex, Gold;
     public GameObject ButtonsPanel;
 
     private void Awake()
@@ -39,7 +39,11 @@ public class LevelSelection : MonoBehaviour
             }
         }
 
-        Debug.Log("Finished adding world buttons");
+        GameData data = GameDataManager.LoadData();
+        Spd.text = "Speed: " + data.speed;
+        Dmg.text = "Damage: " + data.damage;
+        Dex.text = "Dexterity: " + data.dexterity;
+        Gold.text = "Gold: " + data.gold;
     }
 
     private void OnEditorClick()

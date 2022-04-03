@@ -20,14 +20,15 @@ public class Menu : MonoBehaviour
 
     private void OnPlayClick()
     {
-        if (!string.IsNullOrEmpty(InputField.text))
+        if (!string.IsNullOrEmpty(InputField.text) && !GameDataManager.DataExist())
         {
             GameData data = new GameData()
             {
                 username = InputField.text,
                 speed = 300f,
                 damage = 25,
-                dexterity = 5f
+                dexterity = 5f,
+                gold = 0
             };
 
             GameDataManager.SaveData(data);

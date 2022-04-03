@@ -2,9 +2,15 @@
 
 public class GameCamera : MonoBehaviour
 {
+    public static GameCamera Instance;
     public Vector3 Offset = new Vector3(0, 0, 0);
     public Transform target { get ; private set; }
     private bool targetSet = false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void LateUpdate()
     {
@@ -18,6 +24,12 @@ public class GameCamera : MonoBehaviour
     {
         target = transform;
         targetSet = true;
+    }
+
+    public void RemoveTarget()
+    {
+        targetSet = false;
+        target = null;
     }
 
 }

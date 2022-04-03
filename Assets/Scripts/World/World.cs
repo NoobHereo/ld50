@@ -15,6 +15,7 @@ public class World : MonoBehaviour
     public Tilemap Tilemap;
     public TextMeshProUGUI EnemiesLeft;
     private int enemies = 0;
+    private int goldGain = 0;
 
     private void Start()
     {
@@ -172,16 +173,27 @@ public class World : MonoBehaviour
 
     public void EnemyDeath()
     {
+        enemies--;
+        EnemiesLeft.text = "Enemies left: " + enemies;
         if (enemies <= 0)
         {
             CompleteLevel();
         }
-        enemies--;
-        EnemiesLeft.text = "Enemies left: " + enemies;
+    }
+
+    private void GainGold(int gold)
+    {
+        goldGain += gold;
     }
 
     public void CompleteLevel()
     {
+        GameData data = new GameData();
+        data.gold = goldGain;
+        GameDataManager.SaveData(data);
+
+        GameCamera.Instance.RemoveTarget();
+        Destroy(Player.Instance.gameObject);
         LevelCompleted.Instance.Dispatch(true);
     }
 }
