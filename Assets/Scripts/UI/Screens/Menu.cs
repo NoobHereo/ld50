@@ -4,29 +4,24 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Button Playbutton, EditorButton, QuitButton;
+    public Button Playbutton, QuitButton;
+    public LevelSelection LevelSelection;
 
     private void Start()
     {
-        Playbutton.onClick.AddListener(OnPlayClick);
-        EditorButton.onClick.AddListener(OnEditorClick);
+        Playbutton.onClick.AddListener(OnPlayClick);        
         QuitButton.onClick.AddListener(OnQuitClick);
     }
 
     private void OnPlayClick()
     {
-        World.Instance.LoadWorld("Tutorial");
+        LevelSelection.Dispatch(true);
         Dispatch(false);        
     }
 
-    private void Dispatch(bool visible)
+    public void Dispatch(bool visible)
     {
         transform.GetChild(0).gameObject.SetActive(visible);
-    }
-
-    private void OnEditorClick()
-    {
-        SceneManager.LoadScene("MapEditor");
     }
 
     private void OnQuitClick()
