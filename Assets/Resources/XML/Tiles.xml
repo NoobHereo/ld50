@@ -19,5 +19,15 @@
     <SpriteAsset>StaticObjects8x8</SpriteAsset>
     <SpriteIndex>7</SpriteIndex>
   </Tile>
+
+  <Tile name="Checker Black">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>15</SpriteIndex>
+  </Tile>
+
+  <Tile name="Checker White">
+    <SpriteAsset>StaticObjects8x8</SpriteAsset>
+    <SpriteIndex>16</SpriteIndex>
+  </Tile>
   
 </Tiles>

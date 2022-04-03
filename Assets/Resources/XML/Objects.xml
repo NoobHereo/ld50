@@ -244,5 +244,21 @@
     <SpriteIndex>61</SpriteIndex>
     <NoOutline/>
   </Object>
+
+  <Object name="Wooden Wall">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>7</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+  </Object>
+
+  <Object name="Wooden Wall Top">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>8</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+  </Object>
   
 </Objects>
