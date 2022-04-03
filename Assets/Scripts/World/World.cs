@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Xml.Linq;
 using cakeslice;
+using TMPro;
 
 public class World : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class World : MonoBehaviour
     public Dictionary<Vector3Int, SimpleTile> Tiles = new Dictionary<Vector3Int, SimpleTile>();
     public Dictionary<Vector3Int, GameObject> Objects = new Dictionary<Vector3Int, GameObject>();
     public Tilemap Tilemap;
+    public TextMeshProUGUI EnemiesLeft;
+    private int enemies = 0;
 
     private void Start()
     {
@@ -68,6 +71,12 @@ public class World : MonoBehaviour
                 GenerateObject(data, newPos);
             }
         }
+
+        EnemiesLeft.text = "Enemies left: " + enemies;
+        if (CurrentMap == "Tutorial")
+            EnemiesLeft.gameObject.SetActive(false);
+        else
+            EnemiesLeft.gameObject.SetActive(true);
 
         InstantiatePlayer();
     }
@@ -150,11 +159,27 @@ public class World : MonoBehaviour
 
             dmgTrigger.AddComponent<EnemyDamageTrigger>();
             dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp);
+            enemies++;
         }
 
         obj.transform.position = newPos;
         obj.AddComponent<Outline>();
 
         Objects.Add(newPos, obj);
+    }
+
+    public void EnemyDeath()
+    {
+        if (enemies <= 0)
+        {
+            CompleteLevel();
+        }
+        enemies--;
+        EnemiesLeft.text = "Enemies left: " + enemies;
+    }
+
+    public void CompleteLevel()
+    {
+
     }
 }

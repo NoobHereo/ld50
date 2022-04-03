@@ -26,7 +26,8 @@ public class LevelButton : MonoBehaviour
     private void OnClick()
     {
         LevelSelection.Instance.Dispatch(false);
-        World.Instance.LoadWorld(Name);
+        StartLevel.Instance.Dispatch(true);
+        StartLevel.Instance.Init(Name);
     }
 
 

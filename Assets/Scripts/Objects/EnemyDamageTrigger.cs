@@ -15,6 +15,9 @@ public class EnemyDamageTrigger : MonoBehaviour
     {
         Health -= dmg;
         if (Health <= 0)
+        {
+            World.Instance.EnemyDeath();
             Destroy(Host.gameObject);
+        }
     }
 }
