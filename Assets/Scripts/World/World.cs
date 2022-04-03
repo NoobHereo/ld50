@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Xml.Linq;
+using cakeslice;
 
 public class World : MonoBehaviour
 {
@@ -64,49 +65,7 @@ public class World : MonoBehaviour
             // Objects
             else if (data.type == TileType.Object)
             {
-                if (data.name == "Tutorial WASD hud")
-                {
-                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/ControlsHUD"));
-                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
-                }
-                else if (data.name == "Tutorial BARRELS hud")
-                {
-                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/BarrelsHUD"));
-                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
-                }
-                else if (data.name == "Tutorial Enemy hud")
-                {
-                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/EnemyHUD"));
-                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
-                }
-
-                GameObject obj = new GameObject(data.name);
-                obj.AddComponent<SpriteRenderer>();
-                var renderer = obj.GetComponent<SpriteRenderer>();
-                XElement xml = null;
-
-                if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
-                {
-                    xml = AssetHandler.ObjectXMLs[data.name];
-                    bool hidden = xml.Element("Hidden") != null ? true : false;
-                    Sprite sprite = hidden ? Resources.Load<Sprite>($"Sprites/Invisible") : AssetHandler.GetSpriteFromXML(xml);
-                    renderer.sprite = sprite;
-                }
-
-                if (xml.Element("HasCollider") != null)
-                {
-                    obj.AddComponent<BoxCollider2D>();
-                    BoxCollider2D collider = obj.GetComponent<BoxCollider2D>();
-                    collider.size = new Vector2(1f, 1f);
-                    collider.offset = new Vector2(0, 0);
-
-                    collider.isTrigger = xml.Element("IsTrigger") != null ? true : false;
-                }    
-
-                renderer.sortingLayerID = SortingLayer.NameToID("Objects");
-                renderer.sortingOrder = 1;
-                obj.transform.position = newPos;
-                Objects.Add(newPos, obj);
+                GenerateObject(data, newPos);
             }
         }
 
@@ -124,5 +83,54 @@ public class World : MonoBehaviour
         GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
         player.GetComponent<Player>().InitCamera();
         player.transform.position = spawn.transform.position;
+    }
+
+    private void GenerateObject(SimpleTileData data, Vector3Int newPos)
+    {
+        if (data.name == "Tutorial WASD hud")
+        {
+            GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/ControlsHUD"));
+            HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+        }
+        else if (data.name == "Tutorial BARRELS hud")
+        {
+            GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/BarrelsHUD"));
+            HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+        }
+        else if (data.name == "Tutorial Enemy hud")
+        {
+            GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/EnemyHUD"));
+            HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+        }
+
+        GameObject obj = new GameObject(data.name);
+        obj.AddComponent<SpriteRenderer>();
+        var renderer = obj.GetComponent<SpriteRenderer>();
+        XElement xml = null;
+
+        if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
+        {
+            xml = AssetHandler.ObjectXMLs[data.name];
+            bool hidden = xml.Element("Hidden") != null ? true : false;
+            Sprite sprite = hidden ? Resources.Load<Sprite>($"Sprites/Invisible") : AssetHandler.GetSpriteFromXML(xml);
+            renderer.sprite = sprite;
+        }
+
+        if (xml.Element("HasCollider") != null)
+        {
+            obj.AddComponent<BoxCollider2D>();
+            BoxCollider2D collider = obj.GetComponent<BoxCollider2D>();
+            collider.size = new Vector2(1f, 1f);
+            collider.offset = new Vector2(0, 0);
+
+            collider.isTrigger = xml.Element("IsTrigger") != null ? true : false;
+        }
+
+        renderer.sortingLayerID = SortingLayer.NameToID("Objects");
+        renderer.sortingOrder = 1;
+        obj.transform.position = newPos;
+        obj.AddComponent<Outline>();
+
+        Objects.Add(newPos, obj);
     }
 }
