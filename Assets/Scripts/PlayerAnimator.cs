@@ -23,7 +23,7 @@ public class PlayerAnimator : MonoBehaviour
     private int downLen;
 
     private SpriteRenderer sRenderer;
-    private PlayerSpriteState state;
+    private PlayerSpriteState state = PlayerSpriteState.IdleRight;
 
     private int counter;
     private float timer = 0;

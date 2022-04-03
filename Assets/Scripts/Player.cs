@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private PlayerAnimator animator;
-    private PlayerSpriteState lastDir;
+    private PlayerSpriteState lastDir = PlayerSpriteState.IdleRight;
 
     private void Start()
     {
@@ -41,6 +41,9 @@ public class Player : MonoBehaviour
             lastDir = vertical > 0.1f ? PlayerSpriteState.IdleUp : PlayerSpriteState.IdleDown;
             Sword.UpdateOrientation(vertical > 0.1f ? PlayerSpriteState.Up : PlayerSpriteState.Down);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            Sword.AnimateSwing(lastDir);
 
         rb.velocity = new Vector2(horizontal * Speed * Time.fixedDeltaTime, vertical * Speed * Time.fixedDeltaTime);
     }
