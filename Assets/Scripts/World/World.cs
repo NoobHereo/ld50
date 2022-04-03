@@ -64,6 +64,24 @@ public class World : MonoBehaviour
             // Objects
             else if (data.type == TileType.Object)
             {
+                if (data.name == "Tutorial WASD hud")
+                {
+                    Debug.Log("1");
+                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/ControlsHUD"));
+                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+                }
+                else if (data.name == "Tutorial BARRELS hud")                 
+                {
+                    Debug.Log("2");
+                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/BarrelsHUD"));
+                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+                }
+                else if (data.name == "Tutorial Enemy hud")
+                {
+                    Debug.Log("3");
+                    GameObject HUD = Instantiate(Resources.Load<GameObject>("Prefabs/EnemyHUD"));
+                    HUD.transform.position = new Vector3(data.posX, data.posY, 0);
+                }
                 GameObject obj = new GameObject(data.name);
                 obj.AddComponent<SpriteRenderer>();
                 var renderer = obj.GetComponent<SpriteRenderer>();

@@ -12,6 +12,8 @@ public static class AssetHandler
 
     public static void ParseTiles(TextAsset tileXML)
     {
+        TileXMLs = new Dictionary<string, XElement>();
+
         var tiles = XElement.Parse(tileXML.text);
         foreach(var tile in tiles.Elements("Tile"))
         {
@@ -24,6 +26,8 @@ public static class AssetHandler
 
     public static void ParseObjects(TextAsset objXML)
     {
+        ObjectXMLs = new Dictionary<string, XElement>();
+
         var objects = XElement.Parse(objXML.text);
         foreach(var obj in objects.Elements("Object"))
         {
@@ -53,6 +57,8 @@ public static class AssetHandler
 
     public static void ParseWorlds(TextAsset worldsXML)
     {
+        WorldXMLs = new Dictionary<string, XElement>();
+
         var worlds = XElement.Parse(worldsXML.text);
         foreach(var worldXml in worlds.Elements("World"))
         {

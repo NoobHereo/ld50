@@ -89,5 +89,20 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>34</SpriteIndex>
   </Object>
+
+  <Object name="Tutorial WASD hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+  </Object>
+
+  <Object name="Tutorial BARRELS hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+  </Object>
+
+  <Object name="Tutorial Enemy hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+  </Object>
   
 </Objects>

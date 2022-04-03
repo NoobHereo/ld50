@@ -963,7 +963,7 @@
         {
             "name": "Playerspawn",
             "posX": -2,
-            "posY": -2,
+            "posY": -3,
             "type": 1
         },
         {
@@ -1768,6 +1768,24 @@
             "name": "Dark Barrel",
             "posX": -2,
             "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Tutorial WASD hud",
+            "posX": -2,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Tutorial BARRELS hud",
+            "posX": -2,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Tutorial Enemy hud",
+            "posX": -2,
+            "posY": 10,
             "type": 1
         }
     ]
