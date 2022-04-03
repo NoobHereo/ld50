@@ -12,4 +12,8 @@
     <resource>EnemyTestWorld</resource>
   </World>
 
+  <World name="Feast Hall">
+    <resource>Hall</resource>
+  </World>
+
 </Worlds>
