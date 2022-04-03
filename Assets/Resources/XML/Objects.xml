@@ -33,6 +33,7 @@
       <SpriteIndex>19</SpriteIndex>
     </RandomTexture>
     -->
+    <Health>50</Health>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
@@ -40,6 +41,7 @@
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>36</SpriteIndex>
+    <Health>50</Health>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
@@ -47,60 +49,70 @@
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>24</SpriteIndex>
+    <Health>50</Health>
   </Object>
 
   <Object name="Big Dark Barrel">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>36</SpriteIndex>
+    <Health>50</Health>
   </Object>
 
   <Object name="Ghost Knight">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>2</SpriteIndex>
+    <Health>75</Health>
   </Object>
 
   <Object name="Orc">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>3</SpriteIndex>
+    <Health>125</Health>
   </Object>
 
   <Object name="Goblin">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>4</SpriteIndex>
+    <Health>100</Health>
   </Object>
 
   <Object name="Zombie">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>5</SpriteIndex>
+    <Health>100</Health>
   </Object>
 
   <Object name="Skeleton">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>6</SpriteIndex>
+    <Health>80</Health>
   </Object>
 
   <Object name="Chicken">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>32</SpriteIndex>
+    <Health>25</Health>
   </Object>
 
   <Object name="Cat">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>33</SpriteIndex>
+    <Health>60</Health>
   </Object>
 
   <Object name="Weird Slimy Thing">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>34</SpriteIndex>
+    <Health>25</Health>
   </Object>
 
   <Object name="Tutorial WASD hud">

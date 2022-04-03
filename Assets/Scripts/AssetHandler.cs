@@ -67,6 +67,7 @@ public static class AssetHandler
             WorldXMLs.Add(name, worldXml);
         }
 
-        LevelSelection.Instance.Init();
+        if (LevelSelection.Instance != null)
+            LevelSelection.Instance.Init();
     }
 }

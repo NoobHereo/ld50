@@ -63,6 +63,7 @@ public class PlayerSword : MonoBehaviour
         {
             animating = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
             switch (state)
             {
                 case PlayerSpriteState.Right:
@@ -106,6 +107,7 @@ public class PlayerSword : MonoBehaviour
         }
 
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         animating = false;
     }
 
