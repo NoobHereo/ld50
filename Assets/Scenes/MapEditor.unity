@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Share with a friend
+  m_text: Save to Desktop
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d695744adbca6184589121cef309518b, type: 2}
   m_sharedMaterial: {fileID: 443364036680470405, guid: d695744adbca6184589121cef309518b, type: 2}
