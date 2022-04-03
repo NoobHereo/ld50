@@ -27,7 +27,7 @@ public class PlayerAnimator : MonoBehaviour
 
     private int counter;
     private float timer = 0;
-    private float speed = 0.26f;
+    private float speed = 0.13f;
 
     private void Start()
     {
