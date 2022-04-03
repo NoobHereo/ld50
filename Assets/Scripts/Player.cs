@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
+    public int Damage = 25;
     public float Speed = 300f;
+
     public PlayerSword Sword;
 
     private Rigidbody2D rb;
@@ -11,6 +15,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<PlayerAnimator>();
     }

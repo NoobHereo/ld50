@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using cakeslice;
 
 public class PlayerSword : MonoBehaviour
 {
@@ -63,7 +62,6 @@ public class PlayerSword : MonoBehaviour
         if (!animating)
         {
             animating = true;
-            gameObject.GetComponent<Outline>().enabled = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             switch (state)
             {
@@ -107,9 +105,16 @@ public class PlayerSword : MonoBehaviour
             yield return null;
         }
 
-        gameObject.GetComponent<Outline>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         animating = false;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy" && animating)
+        {
+            collision.GetComponent<EnemyDamageTrigger>().TakeDamage(Player.Instance.Damage);
+            return;
+        }
+    }
 }

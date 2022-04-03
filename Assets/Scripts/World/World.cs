@@ -126,6 +126,27 @@ public class World : MonoBehaviour
             collider.isTrigger = xml.Element("IsTrigger") != null ? true : false;
         }
 
+        if (xml.Element("Enemy") != null)
+        {
+            GameObject dmgTrigger = new GameObject("DmgTrigger");
+            dmgTrigger.transform.parent = obj.transform;
+            dmgTrigger.transform.position = Vector3.zero;
+            dmgTrigger.tag = "Enemy";
+
+            dmgTrigger.AddComponent<BoxCollider2D>();
+            BoxCollider2D dmgCol = dmgTrigger.GetComponent<BoxCollider2D>();
+            dmgCol.size = new Vector2(1f, 1f);
+            dmgCol.offset = new Vector2(0, 0.5f);
+            dmgCol.isTrigger = true;
+
+            int hp = 100;
+            if (xml.Element("Health") != null)
+                hp = int.Parse(xml.Element("Health").Value);
+
+            dmgTrigger.AddComponent<EnemyDamageTrigger>();
+            dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp);
+        }
+
         renderer.sortingLayerID = SortingLayer.NameToID("Objects");
         renderer.sortingOrder = 1;
         obj.transform.position = newPos;

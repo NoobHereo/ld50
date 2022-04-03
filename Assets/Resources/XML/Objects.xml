@@ -20,6 +20,7 @@
 
   <!-- This should probably have some randomized sprites-->
   <Object name="Barrel">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>12</SpriteIndex>
     <!--
@@ -36,57 +37,68 @@
 
   <!-- This should probably have some randomized sprites-->
   <Object name="Tinted Barrel">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>36</SpriteIndex>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
   <Object name="Dark Barrel">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>24</SpriteIndex>
   </Object>
 
   <Object name="Big Dark Barrel">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>36</SpriteIndex>
   </Object>
 
   <Object name="Ghost Knight">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>2</SpriteIndex>
   </Object>
 
   <Object name="Orc">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>3</SpriteIndex>
   </Object>
 
   <Object name="Goblin">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>4</SpriteIndex>
   </Object>
 
   <Object name="Zombie">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>5</SpriteIndex>
   </Object>
 
   <Object name="Skeleton">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>6</SpriteIndex>
   </Object>
 
   <Object name="Chicken">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>32</SpriteIndex>
   </Object>
 
   <Object name="Cat">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>33</SpriteIndex>
   </Object>
 
   <Object name="Weird Slimy Thing">
+    <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>34</SpriteIndex>
   </Object>

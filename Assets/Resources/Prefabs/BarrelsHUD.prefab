@@ -123,7 +123,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Destroying barrels has a \nchance to reward you with\ngold!"
+  m_text: "Destroying barrels has a \nchance to reward you with\ngold. Press [SPACE]
+    to attack!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d695744adbca6184589121cef309518b, type: 2}
   m_sharedMaterial: {fileID: 443364036680470405, guid: d695744adbca6184589121cef309518b, type: 2}
