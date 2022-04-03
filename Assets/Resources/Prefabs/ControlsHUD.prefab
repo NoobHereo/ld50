@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 159018688748728488}
   - component: {fileID: 2237057370015737719}
   - component: {fileID: 8967026557226203506}
+  - component: {fileID: 6091192371669279491}
   m_Layer: 5
   m_Name: WIco
   m_TagString: Untagged
@@ -485,8 +486,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 124672507
-  m_SortingLayer: 3
+  m_SortingLayerID: 624807441
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3946236065164321949, guid: 4b3ce09302b76794d8d671b3969a965a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -499,6 +500,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6091192371669279491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2383306386380825558}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &3358474865841087706
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +527,7 @@ GameObject:
   - component: {fileID: 8932821363580231337}
   - component: {fileID: 5280533807376333698}
   - component: {fileID: 8080828597160450928}
+  - component: {fileID: 4463876213245907397}
   m_Layer: 5
   m_Name: SIco
   m_TagString: Untagged
@@ -582,8 +600,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 124672507
-  m_SortingLayer: 3
+  m_SortingLayerID: 624807441
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3946236065164321949, guid: 4b3ce09302b76794d8d671b3969a965a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -596,6 +614,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4463876213245907397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3358474865841087706}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &3470868913413582914
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +641,7 @@ GameObject:
   - component: {fileID: 5605379064994255114}
   - component: {fileID: 5233448839662464203}
   - component: {fileID: 4747778870219442701}
+  - component: {fileID: 4006660021343852622}
   m_Layer: 5
   m_Name: AIco
   m_TagString: Untagged
@@ -679,8 +714,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 124672507
-  m_SortingLayer: 3
+  m_SortingLayerID: 624807441
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3946236065164321949, guid: 4b3ce09302b76794d8d671b3969a965a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -693,6 +728,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4006660021343852622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3470868913413582914}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &4161560220696216104
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +889,7 @@ GameObject:
   - component: {fileID: 8700662593424167978}
   - component: {fileID: 2133865963140049124}
   - component: {fileID: 2614262368485399459}
+  - component: {fileID: 580905307123680491}
   m_Layer: 5
   m_Name: DIco
   m_TagString: Untagged
@@ -910,8 +962,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 124672507
-  m_SortingLayer: 3
+  m_SortingLayerID: 624807441
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 3946236065164321949, guid: 4b3ce09302b76794d8d671b3969a965a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -924,6 +976,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &580905307123680491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507691290672363935}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 1
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!1 &5555324697169575904
 GameObject:
   m_ObjectHideFlags: 0
