@@ -4,35 +4,28 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>2</SpriteIndex>
     <Hidden/>
+    <NoSort/>
   </Object>
   
   <Object name="Dark Wall">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>0</SpriteIndex>
     <HasCollider/>
+    <NoSort/>
   </Object>
 
   <Object name="Dark Wall Top">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>1</SpriteIndex>
     <HasCollider/>
+    <NoSort/>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
   <Object name="Barrel">
     <Enemy/>
     <SpriteAsset>Objects8x8</SpriteAsset>
-    <SpriteIndex>12</SpriteIndex>
-    <!--
-    <RandomTexture>      
-      <SpriteIndex>12</SpriteIndex>
-      <SpriteIndex>13</SpriteIndex>
-      <SpriteIndex>15</SpriteIndex>
-      <SpriteIndex>17</SpriteIndex>
-      <SpriteIndex>18</SpriteIndex>
-      <SpriteIndex>19</SpriteIndex>
-    </RandomTexture>
-    -->
+    <SpriteIndex>12</SpriteIndex>    
     <Health>50</Health>
   </Object>
 
@@ -119,18 +112,21 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
     <Hidden/>
+    <NoSort/>
   </Object>
 
   <Object name="Tutorial BARRELS hud">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
     <Hidden/>
+    <NoSort/>
   </Object>
 
   <Object name="Tutorial Enemy hud">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>11</SpriteIndex>
     <Hidden/>
+    <NoSort/>
   </Object>
 
   <Object name="Small Pot">

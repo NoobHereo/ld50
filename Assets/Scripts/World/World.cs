@@ -106,6 +106,8 @@ public class World : MonoBehaviour
         GameObject obj = new GameObject(data.name);
         obj.AddComponent<SpriteRenderer>();
         var renderer = obj.GetComponent<SpriteRenderer>();
+        renderer.sortingLayerID = SortingLayer.NameToID("Objects");
+        
         XElement xml = null;
 
         if (AssetHandler.ObjectXMLs.ContainsKey(data.name))
@@ -115,6 +117,9 @@ public class World : MonoBehaviour
             Sprite sprite = hidden ? Resources.Load<Sprite>($"Sprites/Invisible") : AssetHandler.GetSpriteFromXML(xml);
             renderer.sprite = sprite;
         }
+
+        if (xml.Element("NoSort") == null)
+            obj.AddComponent<HeightRendering>();
 
         if (xml.Element("HasCollider") != null)
         {
@@ -147,8 +152,6 @@ public class World : MonoBehaviour
             dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp);
         }
 
-        renderer.sortingLayerID = SortingLayer.NameToID("Objects");
-        renderer.sortingOrder = 1;
         obj.transform.position = newPos;
         obj.AddComponent<Outline>();
 
