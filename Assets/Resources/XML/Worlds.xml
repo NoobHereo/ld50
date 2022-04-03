@@ -4,16 +4,24 @@
     <resource>Tutorial</resource>
   </World>
 
-  <World name="Dark Cellar">
+  <World name="Dark Basement">
     <resource>TestLevel</resource>
   </World>
 
-  <World name="Enemy Test World">
+  <World name="Abnormal Building">
     <resource>EnemyTestWorld</resource>
   </World>
 
   <World name="Feast Hall">
     <resource>Hall</resource>
+  </World>
+
+  <World name="Haunted House">
+    <resource>HauntedHouse</resource>
+  </World>
+
+  <World name="Abandoned Cellar">
+    <resource>AbandonedCellar</resource>
   </World>
 
 </Worlds>

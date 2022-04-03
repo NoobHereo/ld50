@@ -5,6 +5,7 @@
     <SpriteIndex>2</SpriteIndex>
     <Hidden/>
     <NoSort/>
+    <NoOutline/>
   </Object>
   
   <Object name="Dark Wall">
@@ -12,6 +13,7 @@
     <SpriteIndex>0</SpriteIndex>
     <HasCollider/>
     <NoSort/>
+    <NoOutline/>
   </Object>
 
   <Object name="Dark Wall Top">
@@ -19,6 +21,7 @@
     <SpriteIndex>1</SpriteIndex>
     <HasCollider/>
     <NoSort/>
+    <NoOutline/>
   </Object>
 
   <!-- This should probably have some randomized sprites-->
@@ -162,14 +165,17 @@
   <Object name="Ribcage">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>48</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Skull">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>49</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Femur">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>50</SpriteIndex>
+    <NoOutline/>
   </Object>
 
   <Object name="Pile of Gold">
@@ -210,27 +216,33 @@
   <Object name="Big Rock">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>56</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Medium Rock">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>57</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Small Rock">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>58</SpriteIndex>
+    <NoOutline/>
   </Object>
 
   <Object name="Grass 1">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>59</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Grass 2">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>60</SpriteIndex>
+    <NoOutline/>
   </Object>
   <Object name="Grass 3">
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>61</SpriteIndex>
+    <NoOutline/>
   </Object>
   
 </Objects>

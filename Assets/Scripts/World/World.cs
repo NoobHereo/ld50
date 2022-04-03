@@ -163,7 +163,9 @@ public class World : MonoBehaviour
         }
 
         obj.transform.position = newPos;
-        obj.AddComponent<Outline>();
+        
+        if (xml.Element("NoOutline") == null)
+            obj.AddComponent<Outline>();
 
         Objects.Add(newPos, obj);
     }
@@ -180,6 +182,6 @@ public class World : MonoBehaviour
 
     public void CompleteLevel()
     {
-
+        LevelCompleted.Instance.Dispatch(true);
     }
 }
