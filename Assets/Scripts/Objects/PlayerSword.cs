@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using cakeslice;
 
 public class PlayerSword : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerSword : MonoBehaviour
     {
         if (!animating)
         {
+            //gameObject.GetComponent<Outline>().enabled = false;
+            //gameObject.GetComponent<SpriteRenderer>().enabled = false;
             switch (state)
             {
                 case PlayerSpriteState.Right:
@@ -57,43 +60,43 @@ public class PlayerSword : MonoBehaviour
 
     public void AnimateSwing(PlayerSpriteState state)
     {
-        Debug.Log("hm");
-        animating = true;
-        switch (state)
+        if (!animating)
         {
-            case PlayerSpriteState.Right:
-            case PlayerSpriteState.IdleRight:
-                ExeAnim(270f, 445f);
-                break;
+            animating = true;
+            gameObject.GetComponent<Outline>().enabled = true;
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            switch (state)
+            {
+                case PlayerSpriteState.Right:
+                case PlayerSpriteState.IdleRight:
+                    ExeAnim(270f, 445f);
+                    break;
 
 
-            case PlayerSpriteState.Left:
-            case PlayerSpriteState.IdleLeft:
-                ExeAnim(370f, 545f);
-                break;
+                case PlayerSpriteState.Left:
+                case PlayerSpriteState.IdleLeft:
+                    ExeAnim(370f, 545f);
+                    break;
 
 
-            case PlayerSpriteState.Up:
-            case PlayerSpriteState.IdleUp:
-                ExeAnim(330f, 505f);
-                break;
+                case PlayerSpriteState.Up:
+                case PlayerSpriteState.IdleUp:
+                    ExeAnim(330f, 505f);
+                    break;
 
 
-            case PlayerSpriteState.Down:
-            case PlayerSpriteState.IdleDown:
-                ExeAnim(595f, 795f);
-                break;
+                case PlayerSpriteState.Down:
+                case PlayerSpriteState.IdleDown:
+                    ExeAnim(595f, 770f);
+                    break;
+            }
         }
     }
 
     private void ExeAnim(float start, float end)
     {
         transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, start);
-
         StartCoroutine(Swing(start, end));
-
-        animating = false;
-        Debug.Log("done");
     }
 
     private IEnumerator Swing(float start, float end)
@@ -103,6 +106,10 @@ public class PlayerSword : MonoBehaviour
             transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, start + z);
             yield return null;
         }
+
+        gameObject.GetComponent<Outline>().enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        animating = false;
     }
 
 }
