@@ -29,10 +29,12 @@ public class EnemyDamageTrigger : MonoBehaviour
         Health -= dmg;
         if (Health <= 0)
         {
+            SoundManager.Instance.PlaySFX("MonsterDeath");
             World.Instance.EnemyDeath();
             Player.Instance.GainRage(3);
             Destroy(Host.gameObject);
         }
+        SoundManager.Instance.PlaySFX("MonsterHit");
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

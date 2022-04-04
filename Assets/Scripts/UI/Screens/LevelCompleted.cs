@@ -22,12 +22,14 @@ public class LevelCompleted : MonoBehaviour
 
     private void OnMenuClick()
     {
+        SoundManager.Instance.PlaySFX("ButtonClick");
         LevelSelection.Instance.Dispatch(true);
         Dispatch(false);
     }
 
     private void OnQuitClick()
     {
+        SoundManager.Instance.PlaySFX("ButtonClick");
         Application.Quit();
     }
 

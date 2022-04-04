@@ -280,6 +280,13 @@ public class World : MonoBehaviour
             Destroy(obj.Value);
         }
 
+        if (CurrentMap == "Tutorial")
+        {
+            GameObject[] tutObjs = GameObject.FindGameObjectsWithTag("Tutorial");
+            for (int i = 0; i < tutObjs.Length; i++)
+                Destroy(tutObjs[i].gameObject);
+        }
+
         Tiles = new Dictionary<Vector3Int, SimpleTile>();
         Objects = new Dictionary<Vector3Int, GameObject>();
 
@@ -292,6 +299,7 @@ public class World : MonoBehaviour
 
     public void PlayerDeath()
     {
+        SoundManager.Instance.PlaySFX("PlayerDeath");
         count = false;
         time = 0;
         goldGain = 0;
@@ -300,6 +308,13 @@ public class World : MonoBehaviour
         foreach (var obj in Objects)
         {
             Destroy(obj.Value);
+        }
+
+        if (CurrentMap == "Tutorial")
+        {
+            GameObject[] tutObjs = GameObject.FindGameObjectsWithTag("Tutorial");
+            for (int i = 0; i < tutObjs.Length; i++)
+                Destroy(tutObjs[i].gameObject);
         }
 
         Tiles = new Dictionary<Vector3Int, SimpleTile>();

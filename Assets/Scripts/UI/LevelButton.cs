@@ -25,6 +25,7 @@ public class LevelButton : MonoBehaviour
 
     private void OnClick()
     {
+        SoundManager.Instance.PlaySFX("ButtonClick");
         LevelSelection.Instance.Dispatch(false);
         StartLevel.Instance.Dispatch(true);
         StartLevel.Instance.Init(Name);
