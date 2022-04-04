@@ -23,7 +23,6 @@ public class Menu : MonoBehaviour
 
     private void OnPlayClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         if (!string.IsNullOrEmpty(InputField.text) && !GameDataManager.DataExist())
         {
             GameData data = new GameData()
@@ -53,7 +52,6 @@ public class Menu : MonoBehaviour
 
     private void OnQuitClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         Application.Quit();
     }
 }

@@ -19,7 +19,6 @@ public class WorldButton : MonoBehaviour
 
     private void OnClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         MapEditor.Instance.LoadMapRequest(resource);
     }
 

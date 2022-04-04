@@ -299,7 +299,6 @@ public class World : MonoBehaviour
 
     public void PlayerDeath()
     {
-        SoundManager.Instance.PlaySFX("PlayerDeath");
         count = false;
         time = 0;
         goldGain = 0;

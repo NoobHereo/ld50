@@ -44,14 +44,12 @@ public class StartLevel : MonoBehaviour
 
     private void OnStartClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         Dispatch(false);
         World.Instance.LoadWorld(Name);
     }
 
     private void OnBackClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         LevelSelection.Instance.Dispatch(true);
         Dispatch(false);
     }

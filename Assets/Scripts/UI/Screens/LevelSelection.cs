@@ -58,33 +58,28 @@ public class LevelSelection : MonoBehaviour
 
     private void OnEditorClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         SceneManager.LoadScene("MapEditor");
     }
 
     private void OnBackClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         Menu.Dispatch(true);
         Dispatch(false);
     }
 
     private void OnTutorial()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         Dispatch(false);
         World.Instance.LoadWorld("Tutorial");
     }
 
     private void OnLoadClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         LoadPanel.gameObject.SetActive(true);
     }
 
     private void OnLoadConfirmClick()
     {
-        SoundManager.Instance.PlaySFX("ButtonClick");
         string deskPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         string path = deskPath + @"\" + LoadField.text + ".json";
         string content;

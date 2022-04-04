@@ -83,8 +83,7 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int dmg)
-    {
-        SoundManager.Instance.PlaySFX("PlayerHit");
+    { 
         Health -= dmg;
         HealthBar.value = Health;
 
