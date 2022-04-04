@@ -44,15 +44,22 @@ public class World : MonoBehaviour
         }
     }
 
-    public void LoadWorld(string world)
+    public void LoadWorld(string world, bool custom = false, string json = "")
     {
-        foreach(var worldName in AssetHandler.WorldXMLs)
+        if (!custom)
         {
-            if (worldName.Key == world && worldName.Value.Element("resource") != null)
+            foreach (var worldName in AssetHandler.WorldXMLs)
             {
-                CurrentMap = world;
-                RenderMap(worldName.Value.Element("resource").Value);
+                if (worldName.Key == world && worldName.Value.Element("resource") != null)
+                {
+                    CurrentMap = world;
+                    RenderMap(worldName.Value.Element("resource").Value);
+                }
             }
+        }
+        else if (custom)
+        {
+            CustomRender(json);
         }
     }
 
@@ -65,6 +72,40 @@ public class World : MonoBehaviour
         TextAsset json = Resources.Load<TextAsset>($"Maps/{resource}");
         SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json.text);
         foreach(SimpleTileData data in tileData)
+        {
+            Vector2Int pos = new Vector2Int(data.posX, data.posY);
+            Vector3Int newPos = new Vector3Int(pos.x, pos.y, 0);
+
+            // Tiles
+            if (data.type == TileType.Tile)
+            {
+                SimpleTile newTile = (SimpleTile)ScriptableObject.CreateInstance(typeof(SimpleTile));
+                newTile.Name = data.name;
+                newTile.Type = data.type;
+                if (AssetHandler.TileXMLs.ContainsKey(data.name))
+                {
+                    Sprite sprite = AssetHandler.GetSpriteFromXML(AssetHandler.TileXMLs[data.name]);
+                    newTile.Sprite = sprite;
+                }
+                DrawTile(new Vector3Int(pos.x, pos.y, 0), newTile);
+            }
+
+            // Objects
+            else if (data.type == TileType.Object)
+            {
+                GenerateObject(data, newPos);
+            }
+        }
+
+        EnemiesLeft.text = "Enemies left: " + enemies;
+        EnemiesLeft.gameObject.SetActive(true);
+        InstantiatePlayer();
+    }
+
+    public void CustomRender(string json)
+    {
+        SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json);
+        foreach (SimpleTileData data in tileData)
         {
             Vector2Int pos = new Vector2Int(data.posX, data.posY);
             Vector3Int newPos = new Vector3Int(pos.x, pos.y, 0);
