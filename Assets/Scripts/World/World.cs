@@ -13,7 +13,7 @@ public class World : MonoBehaviour
     public Dictionary<Vector3Int, SimpleTile> Tiles = new Dictionary<Vector3Int, SimpleTile>();
     public Dictionary<Vector3Int, GameObject> Objects = new Dictionary<Vector3Int, GameObject>();
     public Tilemap Tilemap;
-    public TextMeshProUGUI EnemiesLeft;
+    public TextMeshProUGUI EnemiesLeft, Timer;
     private int enemies = 0;
     private int goldGain = 0;
 
@@ -134,7 +134,7 @@ public class World : MonoBehaviour
             canMove = true;
 
         if (!canMove)
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
         if (xml.Element("NoSort") == null)
             obj.AddComponent<HeightRendering>();
@@ -189,6 +189,7 @@ public class World : MonoBehaviour
         EnemiesLeft.text = "Enemies left: " + enemies;
         if (enemies <= 0)
         {
+            GainGold(UnityEngine.Random.Range(1, 5));
             CompleteLevel();
         }
     }
