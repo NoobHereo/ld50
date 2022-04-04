@@ -74,11 +74,7 @@ public class World : MonoBehaviour
         }
 
         EnemiesLeft.text = "Enemies left: " + enemies;
-        if (CurrentMap == "Tutorial")
-            EnemiesLeft.gameObject.SetActive(false);
-        else
-            EnemiesLeft.gameObject.SetActive(true);
-
+        EnemiesLeft.gameObject.SetActive(true);
         InstantiatePlayer();
     }
 
@@ -137,6 +133,9 @@ public class World : MonoBehaviour
         if (xml.Element("NoMove") == null)
             canMove = true;
 
+        if (!canMove)
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+
         if (xml.Element("NoSort") == null)
             obj.AddComponent<HeightRendering>();
 
@@ -167,8 +166,12 @@ public class World : MonoBehaviour
             if (xml.Element("Health") != null)
                 hp = int.Parse(xml.Element("Health").Value);
 
+            int damage = 0;
+            if (xml.Element("Damage") != null)
+                damage = int.Parse(xml.Element("Damage").Value);
+
             dmgTrigger.AddComponent<EnemyDamageTrigger>();
-            dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp, canMove);
+            dmgTrigger.GetComponent<EnemyDamageTrigger>().Init(obj, hp, canMove, damage);
             enemies++;
         }
 
@@ -200,6 +203,7 @@ public class World : MonoBehaviour
         GameData data = new GameData();
         data.gold = goldGain;
         GameDataManager.SaveData(data);
+        goldGain = 0;
 
         Tilemap.ClearAllTiles();
         foreach(var obj in Objects)
@@ -213,5 +217,23 @@ public class World : MonoBehaviour
         GameCamera.Instance.RemoveTarget();
         Destroy(Player.Instance.gameObject);
         LevelCompleted.Instance.Dispatch(true);
+    }
+
+    public void PlayerDeath()
+    {
+        goldGain = 0;
+
+        Tilemap.ClearAllTiles();
+        foreach (var obj in Objects)
+        {
+            Destroy(obj.Value);
+        }
+
+        Tiles = new Dictionary<Vector3Int, SimpleTile>();
+        Objects = new Dictionary<Vector3Int, GameObject>();
+
+        GameCamera.Instance.RemoveTarget();
+        Destroy(Player.Instance.gameObject);
+        Death.Instance.Dispatch(true);
     }
 }

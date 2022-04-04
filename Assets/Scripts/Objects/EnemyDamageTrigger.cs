@@ -6,12 +6,14 @@ public class EnemyDamageTrigger : MonoBehaviour
     public int Health { get; private set; }
     private bool canMove = false;
     private float speed = 2f;
+    private int damage = 0;
 
-    public void Init(GameObject host, int hp, bool canMove)
+    public void Init(GameObject host, int hp, bool canMove, int damage)
     {
         Host = host;
         Health = hp;
         this.canMove = canMove;
+        this.damage = damage;
     }
 
     private void Update()
@@ -28,7 +30,16 @@ public class EnemyDamageTrigger : MonoBehaviour
         if (Health <= 0)
         {
             World.Instance.EnemyDeath();
+            Player.Instance.GainRage(3);
             Destroy(Host.gameObject);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Player.Instance.TakeDamage(damage);
         }
     }
 }

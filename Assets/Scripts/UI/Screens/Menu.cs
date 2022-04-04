@@ -5,12 +5,14 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
+    public static Menu Instance;
     public Button Playbutton, QuitButton;
     public LevelSelection LevelSelection;
     public TMP_InputField InputField;
 
     private void Start()
     {
+        Instance = this;
         Playbutton.onClick.AddListener(OnPlayClick);        
         QuitButton.onClick.AddListener(OnQuitClick);
 

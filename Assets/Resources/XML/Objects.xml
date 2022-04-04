@@ -67,6 +67,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>2</SpriteIndex>
     <Health>75</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Orc">
@@ -74,6 +75,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>3</SpriteIndex>
     <Health>125</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Goblin">
@@ -81,6 +83,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>4</SpriteIndex>
     <Health>100</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Zombie">
@@ -88,6 +91,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>5</SpriteIndex>
     <Health>100</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Skeleton">
@@ -95,6 +99,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>6</SpriteIndex>
     <Health>80</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Chicken">
@@ -116,6 +121,7 @@
     <SpriteAsset>Objects8x8</SpriteAsset>
     <SpriteIndex>34</SpriteIndex>
     <Health>25</Health>
+    <Damage>3</Damage>
   </Object>
 
   <Object name="Tutorial WASD hud">
