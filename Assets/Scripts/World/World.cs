@@ -19,6 +19,7 @@ public class World : MonoBehaviour
     private int goldGain = 0;
     private int time = 0;
     private float lastTimeTick = 0;
+    private bool count = false;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class World : MonoBehaviour
 
     private void Update()
     {
-        if (Time.time - lastTimeTick > 1f)
+        if (Time.time - lastTimeTick > 1f && count)
         {
             time++;
             Timer.text = "Time: " + time.ToString();
@@ -105,6 +106,7 @@ public class World : MonoBehaviour
         GameObject player = Instantiate(Resources.Load<GameObject>("Prefabs/Player"));
         player.GetComponent<Player>().InitCamera();
         player.transform.position = spawn.transform.position;
+        count = true;
     }
 
     private void GenerateObject(SimpleTileData data, Vector3Int newPos)
@@ -217,6 +219,7 @@ public class World : MonoBehaviour
 
     public void CompleteLevel()
     {
+        count = false;
         LevelData lData = new LevelData();
         lData.name = CurrentMap;
         lData.resource = currentRes;
@@ -247,6 +250,8 @@ public class World : MonoBehaviour
 
     public void PlayerDeath()
     {
+        count = false;
+        time = 0;
         goldGain = 0;
 
         Tilemap.ClearAllTiles();

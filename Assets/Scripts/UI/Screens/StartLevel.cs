@@ -7,7 +7,7 @@ public class StartLevel : MonoBehaviour
     public static StartLevel Instance;
     public Button StartButton, BackButton;
     public TextMeshProUGUI Title, BestTime, Completed;
-    public string Name { get; private set; }
+    [SerializeField] private string Name;
 
     private void Start()
     {
@@ -36,7 +36,6 @@ public class StartLevel : MonoBehaviour
                 Completed.text = "Completed: " + completed;
                 return;
             }
-            return;
         }
 
         BestTime.text = "Best time: No time yet!";
