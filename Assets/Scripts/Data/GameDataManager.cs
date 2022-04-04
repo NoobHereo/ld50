@@ -2,6 +2,7 @@
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Collections.Generic;
 
 [Serializable]
 public class LevelData
@@ -20,6 +21,7 @@ public class GameData
     public int damage = 25;
     public float dexterity = 5f;
     public int gold = 0;
+    public List<LevelData> CompletedLevels = new List<LevelData>();
 }
 
 public static class GameDataManager

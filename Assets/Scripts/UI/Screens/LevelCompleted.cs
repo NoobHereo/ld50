@@ -6,6 +6,7 @@ public class LevelCompleted : MonoBehaviour
 {
     public static LevelCompleted Instance;
     public Button MenuButton, QuitButton;
+    public TextMeshProUGUI Time;
 
     private void Start()
     {
@@ -28,6 +29,11 @@ public class LevelCompleted : MonoBehaviour
     private void OnQuitClick()
     {
         Application.Quit();
+    }
+
+    public void Init(int time)
+    {
+        Time.text = "Time: " + time + " seconds.";
     }
 
 }

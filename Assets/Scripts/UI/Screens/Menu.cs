@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections.Generic;
 
 public class Menu : MonoBehaviour
 {
@@ -30,7 +31,8 @@ public class Menu : MonoBehaviour
                 speed = 300f,
                 damage = 25,
                 dexterity = 5f,
-                gold = 0
+                gold = 0,
+                CompletedLevels = new List<LevelData>()
             };
 
             GameDataManager.SaveData(data);

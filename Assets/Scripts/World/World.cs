@@ -10,12 +10,15 @@ public class World : MonoBehaviour
 {
     public static World Instance;
     public string CurrentMap = "None";
+    private string currentRes = "Hall";
     public Dictionary<Vector3Int, SimpleTile> Tiles = new Dictionary<Vector3Int, SimpleTile>();
     public Dictionary<Vector3Int, GameObject> Objects = new Dictionary<Vector3Int, GameObject>();
     public Tilemap Tilemap;
     public TextMeshProUGUI EnemiesLeft, Timer;
     private int enemies = 0;
     private int goldGain = 0;
+    private int time = 0;
+    private float lastTimeTick = 0;
 
     private void Start()
     {
@@ -26,6 +29,18 @@ public class World : MonoBehaviour
         TextAsset objXML = Resources.Load<TextAsset>("XML/Objects");
         AssetHandler.ParseObjects(objXML);
         AssetHandler.ParseWorlds(Resources.Load<TextAsset>("XML/Worlds"));
+
+        Timer.text = "Time: " + time.ToString();
+    }
+
+    private void Update()
+    {
+        if (Time.time - lastTimeTick > 1f)
+        {
+            time++;
+            Timer.text = "Time: " + time.ToString();
+            lastTimeTick = Time.time;
+        }
     }
 
     public void LoadWorld(string world)
@@ -44,6 +59,7 @@ public class World : MonoBehaviour
     {
         Tiles = new Dictionary<Vector3Int, SimpleTile>();
         Objects = new Dictionary<Vector3Int, GameObject>();
+        currentRes = resource;
 
         TextAsset json = Resources.Load<TextAsset>($"Maps/{resource}");
         SimpleTileData[] tileData = JsonHelper.FromJson<SimpleTileData>(json.text);
@@ -201,8 +217,15 @@ public class World : MonoBehaviour
 
     public void CompleteLevel()
     {
+        LevelData lData = new LevelData();
+        lData.name = CurrentMap;
+        lData.resource = currentRes;
+        lData.timeSeconds = time;
+        lData.completed = true;
+
         GameData data = new GameData();
         data.gold = goldGain;
+        data.CompletedLevels.Add(lData);
         GameDataManager.SaveData(data);
         goldGain = 0;
 
@@ -218,6 +241,8 @@ public class World : MonoBehaviour
         GameCamera.Instance.RemoveTarget();
         Destroy(Player.Instance.gameObject);
         LevelCompleted.Instance.Dispatch(true);
+        LevelCompleted.Instance.Init(time);
+        time = 0;
     }
 
     public void PlayerDeath()

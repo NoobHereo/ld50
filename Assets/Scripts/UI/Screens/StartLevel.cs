@@ -6,7 +6,7 @@ public class StartLevel : MonoBehaviour
 {
     public static StartLevel Instance;
     public Button StartButton, BackButton;
-    public TextMeshProUGUI Title;
+    public TextMeshProUGUI Title, BestTime, Completed;
     public string Name { get; private set; }
 
     private void Start()
@@ -25,6 +25,22 @@ public class StartLevel : MonoBehaviour
     {
         Name = name;
         Title.text = Name;
+
+        GameData data = GameDataManager.LoadData();
+        foreach(var level in data.CompletedLevels)
+        {
+            if (level.name == Name)
+            {
+                BestTime.text = "Best time: " + level.timeSeconds + " seconds.";
+                string completed = level.completed ? "Yes" : "No";
+                Completed.text = "Completed: " + completed;
+                return;
+            }
+            return;
+        }
+
+        BestTime.text = "Best time: No time yet!";
+        Completed.text = "Completed: No";
     }
 
     private void OnStartClick()

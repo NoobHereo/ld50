@@ -39,11 +39,14 @@ public class LevelSelection : MonoBehaviour
             }
         }
 
-        GameData data = GameDataManager.LoadData();
-        Spd.text = "Speed: " + data.speed;
-        Dmg.text = "Damage: " + data.damage;
-        Dex.text = "Dexterity: " + data.dexterity;
-        Gold.text = "Gold: " + data.gold;
+        if (GameDataManager.DataExist())
+        {
+            GameData data = GameDataManager.LoadData();
+            Spd.text = "Speed: " + data.speed;
+            Dmg.text = "Damage: " + data.damage;
+            Dex.text = "Dexterity: " + data.dexterity;
+            Gold.text = "Gold: " + data.gold;
+        }
     }
 
     private void OnEditorClick()
