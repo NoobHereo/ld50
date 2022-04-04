@@ -24,6 +24,7 @@ public class World : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        Application.targetFrameRate = 144;
 
         TextAsset tileXML = Resources.Load<TextAsset>("XML/Tiles");
         AssetHandler.ParseTiles(tileXML);
