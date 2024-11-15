@@ -1,0 +1,2452 @@
+{
+    "Items": [
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 0,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": 1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": -1,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": -2,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": -3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -7,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -6,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": -4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 6,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 5,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 4,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 3,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 2,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 1,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 0,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -1,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -2,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -3,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -4,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -5,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": -8,
+            "posY": -5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 7,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 7,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 7,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Wooden Floor",
+            "posX": 7,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 8,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 8,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 8,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 8,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 9,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 9,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 9,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 9,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 10,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 10,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 10,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 10,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 11,
+            "posY": 5,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 11,
+            "posY": 4,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 11,
+            "posY": 3,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 11,
+            "posY": 2,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 9,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 10,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 11,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 11,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 10,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 9,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 9,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 10,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 11,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 11,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 10,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 9,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 9,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 10,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 11,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 12,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 13,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 14,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 15,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 16,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 12,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 13,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 14,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 15,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 16,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 17,
+            "posY": 6,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 17,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 17,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 17,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 17,
+            "posY": 10,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 13,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 12,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 14,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 15,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 15,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 14,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 13,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 12,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 12,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 13,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 14,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 15,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Checker White",
+            "posX": 16,
+            "posY": 8,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 16,
+            "posY": 9,
+            "type": 0
+        },
+        {
+            "name": "Checker Black",
+            "posX": 16,
+            "posY": 7,
+            "type": 0
+        },
+        {
+            "name": "Empty Table",
+            "posX": -3,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": -2,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": -1,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": 0,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": 1,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": 2,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": 3,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Empty Table",
+            "posX": -4,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Chair Left",
+            "posX": -5,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Chair Right",
+            "posX": 4,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Chair Top",
+            "posX": -4,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Chair Top",
+            "posX": -2,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Chair Top",
+            "posX": -1,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Chair Top",
+            "posX": 2,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Chair Bottom",
+            "posX": -4,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Chair Bottom",
+            "posX": -1,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Chair Bottom",
+            "posX": 1,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Chair Bottom",
+            "posX": 3,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Big Rock",
+            "posX": -5,
+            "posY": -2,
+            "type": 1
+        },
+        {
+            "name": "Big Rock",
+            "posX": 4,
+            "posY": -1,
+            "type": 1
+        },
+        {
+            "name": "Big Rock",
+            "posX": 3,
+            "posY": 4,
+            "type": 1
+        },
+        {
+            "name": "Grass 1",
+            "posX": 0,
+            "posY": 3,
+            "type": 1
+        },
+        {
+            "name": "Grass 1",
+            "posX": -5,
+            "posY": 4,
+            "type": 1
+        },
+        {
+            "name": "Grass 2",
+            "posX": -2,
+            "posY": -1,
+            "type": 1
+        },
+        {
+            "name": "Grass 3",
+            "posX": 2,
+            "posY": -2,
+            "type": 1
+        },
+        {
+            "name": "Grass 3",
+            "posX": 4,
+            "posY": 3,
+            "type": 1
+        },
+        {
+            "name": "Grass 3",
+            "posX": -3,
+            "posY": -2,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -8,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -7,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -6,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -5,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -4,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -3,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -2,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": -1,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 0,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 1,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 2,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 3,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 4,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 5,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 6,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 9,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 10,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 11,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 12,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 13,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 14,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 15,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 16,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 17,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall",
+            "posX": 7,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall",
+            "posX": 8,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -4,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -3,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -2,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -1,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 3,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 4,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -8,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -7,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -6,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -5,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -4,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -3,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -2,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -1,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 0,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 1,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 2,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 3,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 4,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 5,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 6,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 9,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 10,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 9,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 10,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 11,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 13,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 14,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 15,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 16,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 17,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 12,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 11,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 10,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 9,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 18,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 17,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 16,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 15,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 14,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 13,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 4,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 3,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 2,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 12,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 11,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 10,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 9,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Dark Wall Top",
+            "posX": 8,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": 1,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -9,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -8,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -7,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -6,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -5,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -4,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -3,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -2,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": -1,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 0,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 1,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 2,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 3,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 4,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 5,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 6,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -6,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -4,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -3,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -2,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": -1,
+            "type": 1
+        },
+        {
+            "name": "Wooden Wall Top",
+            "posX": 7,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Playerspawn",
+            "posX": 14,
+            "posY": 8,
+            "type": 1
+        },
+        {
+            "name": "Cat",
+            "posX": -2,
+            "posY": 5,
+            "type": 1
+        },
+        {
+            "name": "Zombie",
+            "posX": 4,
+            "posY": -3,
+            "type": 1
+        },
+        {
+            "name": "Zombie",
+            "posX": 0,
+            "posY": -3,
+            "type": 1
+        },
+        {
+            "name": "Zombie",
+            "posX": 2,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Zombie",
+            "posX": -6,
+            "posY": 0,
+            "type": 1
+        },
+        {
+            "name": "Small Pot",
+            "posX": -6,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Small Pot",
+            "posX": -8,
+            "posY": 3,
+            "type": 1
+        },
+        {
+            "name": "Barrel",
+            "posX": -8,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Barrel",
+            "posX": -8,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Barrel",
+            "posX": -4,
+            "posY": 6,
+            "type": 1
+        },
+        {
+            "name": "Barrel",
+            "posX": 6,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Barrel",
+            "posX": 1,
+            "posY": -5,
+            "type": 1
+        },
+        {
+            "name": "Ghost Knight",
+            "posX": 0,
+            "posY": -1,
+            "type": 1
+        },
+        {
+            "name": "Chicken",
+            "posX": 11,
+            "posY": 9,
+            "type": 1
+        },
+        {
+            "name": "Chicken",
+            "posX": 15,
+            "posY": 7,
+            "type": 1
+        },
+        {
+            "name": "Chicken",
+            "posX": 16,
+            "posY": 9,
+            "type": 1
+        },
+        {
+            "name": "Chicken",
+            "posX": 10,
+            "posY": 3,
+            "type": 1
+        }
+    ]
+}

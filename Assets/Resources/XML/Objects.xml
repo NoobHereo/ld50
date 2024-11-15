@@ -1,0 +1,300 @@
+﻿<Objects>
+
+  <Object name="Playerspawn">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>2</SpriteIndex>
+    <Hidden/>
+    <NoSort/>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  
+  <Object name="Dark Wall">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>0</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Dark Wall Top">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>1</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <!-- This should probably have some randomized sprites-->
+  <Object name="Barrel">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>12</SpriteIndex>    
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <!-- This should probably have some randomized sprites-->
+  <Object name="Tinted Barrel">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>36</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <!-- This should probably have some randomized sprites-->
+  <Object name="Dark Barrel">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>24</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Big Dark Barrel">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>36</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Ghost Knight">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>2</SpriteIndex>
+    <Health>75</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Orc">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>3</SpriteIndex>
+    <Health>125</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Goblin">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>4</SpriteIndex>
+    <Health>100</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Zombie">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>5</SpriteIndex>
+    <Health>100</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Skeleton">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>6</SpriteIndex>
+    <Health>80</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Chicken">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>32</SpriteIndex>
+    <Health>25</Health>
+  </Object>
+
+  <Object name="Cat">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>33</SpriteIndex>
+    <Health>60</Health>
+  </Object>
+
+  <Object name="Weird Slimy Thing">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>34</SpriteIndex>
+    <Health>25</Health>
+    <Damage>3</Damage>
+  </Object>
+
+  <Object name="Tutorial WASD hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
+    <NoSort/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Tutorial BARRELS hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
+    <NoSort/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Tutorial Enemy hud">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>11</SpriteIndex>
+    <Hidden/>
+    <NoSort/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Small Pot">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>38</SpriteIndex>
+    <Health>10</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Small Baskets">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>16</SpriteIndex>
+    <Health>10</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Empty Table">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>45</SpriteIndex>
+    <Health>75</Health>
+    <HasCollider/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Decorated Table">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>46</SpriteIndex>
+    <Health>75</Health>
+    <HasCollider/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Ribcage">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>48</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Skull">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>49</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Femur">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>50</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Pile of Gold">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>51</SpriteIndex>
+    <Health>5</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Chair Left">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>52</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Chair Right">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>53</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Chair Top">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>54</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Chair Bottom">
+    <Enemy/>
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>55</SpriteIndex>
+    <Health>50</Health>
+    <NoMove/>
+  </Object>
+
+  <Object name="Big Rock">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>56</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Medium Rock">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>57</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Small Rock">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>58</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Grass 1">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>59</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Grass 2">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>60</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  <Object name="Grass 3">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>61</SpriteIndex>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Wooden Wall">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>7</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+
+  <Object name="Wooden Wall Top">
+    <SpriteAsset>Objects8x8</SpriteAsset>
+    <SpriteIndex>8</SpriteIndex>
+    <HasCollider/>
+    <NoSort/>
+    <NoOutline/>
+    <NoMove/>
+  </Object>
+  
+</Objects>
