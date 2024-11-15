@@ -5,4 +5,5 @@ Berserk is a top down 2d retro style pixel game that is based on the theme: “D
 
 The game have stats such as Damage, Speed and Dexterity that all makes the game easier to play and might benefit you when playing your friends custom map!
 https://ldjam.com/events/ludum-dare/50/berserk
+
 ------------
